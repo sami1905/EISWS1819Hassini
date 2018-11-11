@@ -1,0 +1,89 @@
+{
+
+      "bloodsugar": [
+        {
+          "id": 0,
+          "sugarvalue": 313,
+          "date": "01-21-2018",
+          "time": "04:23",
+          "timeID": 0
+        },
+          {
+          "id": 1,
+          "sugarvalue": 121,
+          "date": "01-21-2018",
+          "time": "12:01",
+          "timeID": 2
+        },
+          {
+          "id": 2,
+          "sugarvalue": 200,
+          "date": "01-21-2018",
+          "time": "17:55",
+          "timeID": 2
+        },
+          {
+          "id": 3,
+          "sugarvalue": 155,
+          "date": "01-21-2018",
+          "time": "23:12",
+          "timeID": 3
+        },
+          {
+          "id": 4,
+          "sugarvalue": 70,
+          "date": "01-22-2018",
+          "time": "05:44",
+          "timeID": 0
+        },
+          {
+          "id": 5,
+          "sugarvalue": 311,
+          "date": "01-22-2018",
+          "time": "19:43",
+          "timeID": 3
+        },
+          {
+          "id": 6,
+          "sugarvalue": 220,
+          "date": "01-22-2018",
+          "time": "22:21",
+          "timeID": 3
+        },
+          {
+          "id": 7,
+          "sugarvalue": 277,
+          "date": "01-23-2018",
+          "time": "02:23",
+          "timeID": 0
+        },
+           {
+          "id": 8,
+          "sugarvalue": 100,
+          "date": "01-24-2018",
+          "time": "07:23",
+          "timeID": 1
+        }, {
+          "id": 9,
+          "sugarvalue": 313,
+          "date": "01-24-2018",
+          "time": "09:57",
+          "timeID": 1
+        },
+           {
+          "id": 10,
+          "sugarvalue": 187,
+          "date": "01-24-2018",
+          "time": "13:23",
+          "timeID": 2
+        },
+           {
+          "id": 11,
+          "sugarvalue": 179,
+          "date": "01-25-2018",
+          "time": "08:55",
+          "timeID": 1
+        }
+          
+      ]
+}
