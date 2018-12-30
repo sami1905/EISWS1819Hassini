@@ -1,0 +1,35 @@
+{
+  "event": [
+    {
+      "id": 1,
+      "date": "2018-12-29",
+      "value": 122,
+      "carbohydrates": 24,
+      "be": 2,
+      "meal_id": 0,
+      "insulin_units": 4,
+      "insulin_type": 0
+    },
+    {
+      "id": 2,
+      "date": "2018-12-29",
+      "value": 122,
+      "carbohydrates": 24,
+      "be": 2,
+      "meal_id": 0,
+      "insulin_units": 4,
+      "insulin_type": 0
+    },
+    {
+      "id": 3,
+      "date": "2018-12-29",
+      "value": 122,
+      "carbohydrates": 24,
+      "be": 2,
+      "correction": 2,
+      "meal_id": 0,
+      "insulin_units": 6,
+      "insulin_type": 0
+    }
+  ]
+}
