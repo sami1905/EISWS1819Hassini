@@ -5,24 +5,24 @@
     build-mode="COLD"
     density="xhdpi"
     format="10"
-    ir-eligibility="COMPATIBLE"
+    ir-eligibility="CLASS_ADDED"
     plugin-version="3.2.1"
-    timestamp="1546725614363"
+    timestamp="1546727684174"
     token="5096034102087738964"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="260" />
+        duration="216" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="35" />
+        duration="58" />
     <task
         name="verifier"
-        duration="13" />
+        duration="7" />
 
     <artifact
         location="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
@@ -75,8 +75,8 @@
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1546725614363"
+        ir-eligibility="CLASS_ADDED"
+        timestamp="1546727684174"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
