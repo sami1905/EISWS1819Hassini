@@ -1,0 +1,25 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.example.sami.diabetec",
+    "sha256_cert_fingerprints":
+    ["EC:45:D1:1A:31:68:9F:B3:1C:88:E5:31:9D:BE:81:72:D2:59:17:58:56:87:EC:E8:C2:5A:CC:DA:C3:82:92:9C"]
+  }
+},
+{
+  "relation": ["delegate_permission/common.get_login_creds"],
+  "target": {
+    "namespace": "web",
+    "site": "https://www.sihn-in.diabetec.com"
+  }
+},
+{
+  "relation": ["delegate_permission/common.get_login_creds"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.example.sami.diabetec",
+    "sha256_cert_fingerprints":
+    ["EC:45:D1:1A:31:68:9F:B3:1C:88:E5:31:9D:BE:81:72:D2:59:17:58:56:87:EC:E8:C2:5A:CC:DA:C3:82:92:9C"]
+  }
+}]

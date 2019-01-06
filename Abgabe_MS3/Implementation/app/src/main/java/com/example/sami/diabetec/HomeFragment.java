@@ -1,6 +1,8 @@
 package com.example.sami.diabetec;
 
+import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -8,6 +10,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.AxisBase;
@@ -28,11 +31,22 @@ public class HomeFragment extends Fragment {
 
     private LineChart mChart;
 
+    private Button dexcomButton;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
+        dexcomButton = view.findViewById(R.id.button_dexcom);
+
+        dexcomButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://api.dexcom.com/v2/oauth2/login?client_id=LiIbbgsBtr7VqpYkNBveXaOs9vzdnGtw&redirect_uri=http://schemas.android.com/apk/res/android&response_type=code&scope=offline_access"));
+                startActivity(browserIntent);
+            }
+        });
         mChart = view.findViewById(R.id.lineChart);
 
         //mChart.setOnChartGestureListener(HomeFragment.this);
@@ -133,4 +147,6 @@ public class HomeFragment extends Fragment {
             return mValues[(int)value];
         }
     }
+
+
 }
