@@ -7,14 +7,28 @@
     android:background="@android:color/darker_gray"
     tools:context=".addEventActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="Ereignis hinzufügen"
-        android:textSize="25dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="1dp"
-        android:background="@android:color/white"/>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+
+
+
+        <TextView
+            android:id="@+id/text_view_result_addEvent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            />
+
+
+
+
+
+    </android.support.v4.widget.NestedScrollView>
 
     <View
         android:id="@+id/button_View_addEvent"
@@ -24,7 +38,6 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         />
-
     <Button
         android:id="@+id/button_quit"
         android:layout_width="90dp"
@@ -37,5 +50,8 @@
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="60dp"
         android:layout_marginBottom="21dp"/>
+
+
+
 
 </RelativeLayout>

@@ -72,18 +72,18 @@ app.get('/dexcomValues', function(req, res){
 app.post('/events', bodyParser.json(), function(req, res){
     fs.readFile(settings.user_events, function(err,data){
         var events = JSON.parse(data);
-        var numberOfEvents = events.event.length;
+        var numberOfEvents = events.length;
         var max_index = 0;
         
         //id of the last event is inserted into max_index
         for(var i = 0; i< numberOfEvents; i++){
-            if(events.event[i].id > max_index){
-                max_index = events.event[i].id;
+            if(events[i].id > max_index){
+                max_index = events[i].id;
             }
         }
         
         //creat event
-        events.event.push({
+        events.push({
             "id" : ++max_index,
             "date" : req.body.date,
             "value" : req.body.value,
@@ -95,7 +95,7 @@ app.post('/events', bodyParser.json(), function(req, res){
             "insulin_type" : req.body.insulin_type
         });
         fs.writeFile(settings.user_events, JSON.stringify(events, null, 2));
-        res.status(201).send("Ereignis erfolgreich gespeichert\n");
+        res.status(201).send(events[(max_index-1)]);
         
     });
 });

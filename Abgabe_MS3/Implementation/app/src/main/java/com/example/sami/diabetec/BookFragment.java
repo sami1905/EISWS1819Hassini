@@ -7,80 +7,77 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.Volley;
+import java.util.List;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 
 public class BookFragment extends Fragment {
 
-    private TextView mTextViewResult;
-    private RequestQueue mQueue;
+    private TextView textViewResult;
+    private JsonPlaceHolderApi jsonPlaceHolderApi;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_book, container, false);
 
-        mTextViewResult = view.findViewById(R.id.text_view_result);
-        Button buttonParse = view.findViewById(R.id.button_parse);
+        textViewResult = view.findViewById(R.id.text_view_result);
 
-        mQueue = Volley.newRequestQueue(getContext());
+        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://192.168.0.10:3000/").addConverterFactory(GsonConverterFactory.create()).build();
 
-        buttonParse.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                jsonParse();
-            }
-        });
+        jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi.class);
+
+        getEvents();
+
+
 
         return view;
     }
 
-    private void jsonParse(){
-        String url = "http://192.168.0.10:3000/events";
+    private void getEvents(){
+        Call<List<Event>> call = jsonPlaceHolderApi.getEvents();
 
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+        call.enqueue(new Callback<List<Event>>() {
             @Override
-            public void onResponse(JSONObject response) {
-                try {
-                    JSONArray jsonArray = response.getJSONArray("event");
+            public void onResponse(Call<List<Event>> call, Response<List<Event>> response) {
 
-                    for(int i = 0; i < jsonArray.length(); i++){
-                        JSONObject event = jsonArray.getJSONObject(i);
-
-                        int id = event.getInt("id");
-                        String date = event.getString("date");
-                        int value = event.getInt("value");
-                        int carbohydrates = event.getInt("carbohydrates");
-                        int be = event.getInt("be");
-                        int meal_id  = event.getInt("meal_id");
-                        int insulin_units = event.getInt("insulin_units");
-                        int insulin_type = event.getInt("insulin_type");
-
-                        mTextViewResult.append("Datum: " + date + "\n" + "Blutzuckerwert: " + String.valueOf(value) + "\n\n");
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
+                if(!response.isSuccessful()){
+                    textViewResult.setText("Code: " + response.code());
+                    return;
                 }
 
+                List<Event> events = response.body();
+
+                for (Event event : events) {
+                    String content = "";
+                    //content += "ID: " + event.getId() + "\n";
+                    content += "Date: " + event.getDate() + "\n";
+                    content += "Blutzuckerwert: " + event.getValue() + "\n";
+                    content += "Kohlenhydrate: " + event.getCarbohydrates() + "\n";
+                    content += "BEs: " + event.getBe() + "\n";
+                    content += "Korrektureinheiten: " + event.getCorrection() + "\n";
+                    content += "Mahlzeit ID: " + event.getMeal_id() + "\n";
+                    content += "Insulineinheiten: " + event.getInsulin_units() + "\n";
+                    content += "Insulinart: " + event.getInsulin_type() + "\n\n";
+
+                    textViewResult.append(content);
+                }
             }
-        }, new Response.ErrorListener() {
+
             @Override
-            public void onErrorResponse(VolleyError error) {
-                error.printStackTrace();
+            public void onFailure(Call<List<Event>> call, Throwable t) {
+                textViewResult.setText(t.getMessage());
             }
         });
 
-        mQueue.add(request);
     }
+
+
 }
