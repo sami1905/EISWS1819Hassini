@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    tools:context=".addEventActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Ereignis hinzufügen"
+        android:textSize="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="1dp"
+        android:background="@android:color/white"/>
+
+    <View
+        android:id="@+id/button_View_addEvent"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:id="@+id/button_quit"
+        android:layout_width="90dp"
+        android:layout_height="30dp"
+        android:background="@android:color/darker_gray"
+        android:text="Abbrechen"
+        android:textSize="10dp"
+        android:textColor="@android:color/white"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginBottom="21dp"/>
+
+</RelativeLayout>

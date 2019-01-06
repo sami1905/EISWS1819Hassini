@@ -75,59 +75,63 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/Sami/.gradle
 	android:appComponentFactory
 		ADDED from [com.android.support:support-compat:28.0.0] /Users/Sami/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4d04fcc3cc1a54b1f236d8aeeb8d5f26/AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:13:9-35
+		ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:11:9-35
 	android:label
-		ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:11:9-41
+		ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:10:9-41
 	android:allowBackup
 		ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:9:9-35
 	android:theme
-		ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:14:9-40
+		ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:12:9-40
 meta-data#asset_statements
-ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:15:9-17:59
+ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:13:9-15:59
 	android:resource
-		ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:17:13-56
+		ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:15:13-56
 	android:name
-		ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:16:13-44
+		ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:14:13-44
 activity#com.example.sami.diabetec.MainActivity
-ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:18:9-36:20
+ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:17:9-35:20
 	android:name
-		ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:18:19-47
+		ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:17:19-47
 tools:validation
-ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:19:13-67
+ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:18:13-67
 	testUrl
-		ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:19:31-64
+		ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:18:31-64
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:21:13-25:29
+ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:20:13-24:29
 action#android.intent.action.MAIN
-ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:22:17-69
+ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:21:17-69
 	android:name
-		ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:22:25-66
+		ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:21:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:24:17-77
+ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:23:17-77
 	android:name
-		ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:24:27-74
+		ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:23:27-74
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:www.diabetec.com+data:scheme:http
-ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:26:13-35:29
+ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:25:13-34:29
 	android:autoVerify
-		ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:26:28-53
+		ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:25:28-53
 action#android.intent.action.VIEW
-ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:27:17-69
+ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:26:17-69
 	android:name
-		ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:27:25-66
+		ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:26:25-66
 category#android.intent.category.DEFAULT
-ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:29:17-76
+ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:28:17-76
 	android:name
-		ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:29:27-73
+		ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:28:27-73
 category#android.intent.category.BROWSABLE
-ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:30:17-78
+ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:29:17-78
 	android:name
-		ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:30:27-75
+		ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:29:27-75
 data
-ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:32:17-34:55
+ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:31:17-33:45
 	android:host
-		ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:34:21-52
+		ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:32:21-52
 	android:scheme
 		ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:33:21-42
+activity#com.example.sami.diabetec.addEventActivity
+ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:36:9-63
+	android:name
+		ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:36:19-51
 uses-sdk
 INJECTED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml

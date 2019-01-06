@@ -32,6 +32,7 @@ public class HomeFragment extends Fragment {
     private LineChart mChart;
 
     private Button dexcomButton;
+    private Button addEventButton;
 
     @Nullable
     @Override
@@ -39,12 +40,20 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         dexcomButton = view.findViewById(R.id.button_dexcom);
+        addEventButton = view.findViewById(R.id.button_addEvent);
 
         dexcomButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://api.dexcom.com/v2/oauth2/login?client_id=LiIbbgsBtr7VqpYkNBveXaOs9vzdnGtw&redirect_uri=http://schemas.android.com/apk/res/android&response_type=code&scope=offline_access"));
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://api.dexcom.com/v2/oauth2/login?client_id=LiIbbgsBtr7VqpYkNBveXaOs9vzdnGtw&redirect_uri=https://wba2.herokuapp.com&response_type=code&scope=offline_access"));
                 startActivity(browserIntent);
+            }
+        });
+
+        addEventButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openAddEventActivity();
             }
         });
         mChart = view.findViewById(R.id.lineChart);
@@ -86,24 +95,27 @@ public class HomeFragment extends Fragment {
         ArrayList<Entry> yValues = new ArrayList<>();
 
 
-        yValues.add(new Entry(0, 25f));
+        yValues.add(new Entry(0, 80f));
         yValues.add(new Entry(1, 75f));
-        yValues.add(new Entry((float) 1.2, 75f));
-        yValues.add(new Entry(2, 30f));
-        yValues.add(new Entry(3, 65f));
-        yValues.add(new Entry(4, 25f));
-        yValues.add(new Entry(5, 75f));
-        yValues.add(new Entry(6, 30f));
-        yValues.add(new Entry(7, 65f));
-        yValues.add(new Entry(8, 25f));
-        yValues.add(new Entry(9, 75f));
-        yValues.add(new Entry(10, 30f));
-        yValues.add(new Entry(11, 65f));
-        yValues.add(new Entry(12, 25f));
-
-        yValues.add(new Entry(22, 30f));
-        yValues.add(new Entry(23, 65f));
-        yValues.add(new Entry(24, 65f));
+        yValues.add(new Entry((float) 1.2, 76f));
+        yValues.add(new Entry((float) 1.4, 82f));
+        yValues.add(new Entry((float) 1.9, 127f));
+        yValues.add(new Entry((float)2.5, 163f));
+        yValues.add(new Entry(3, 181f));
+        yValues.add(new Entry(4, 170f));
+        yValues.add(new Entry(5, 222f));
+        yValues.add(new Entry((float) 5.5, 190f));
+        yValues.add(new Entry(6, 166f));
+        yValues.add(new Entry(7, 134f));
+        yValues.add(new Entry((float) 7.4, 154f));
+        yValues.add(new Entry(8, 185f));
+        yValues.add(new Entry(9, 280f));
+        yValues.add(new Entry(10, 227f));
+        yValues.add(new Entry(11, 194f));
+        yValues.add(new Entry(12, 144f));
+        yValues.add(new Entry(22, 90f));
+        yValues.add(new Entry(23, 66f));
+        yValues.add(new Entry(24, 86f));
 
         LineDataSet set1 = new LineDataSet(yValues, " ");
 
@@ -146,6 +158,11 @@ public class HomeFragment extends Fragment {
         public String getFormattedValue(float value, AxisBase axis) {
             return mValues[(int)value];
         }
+    }
+
+    public void openAddEventActivity(){
+        Intent intent = new Intent(getActivity(), addEventActivity.class);
+        startActivity(intent);
     }
 
 

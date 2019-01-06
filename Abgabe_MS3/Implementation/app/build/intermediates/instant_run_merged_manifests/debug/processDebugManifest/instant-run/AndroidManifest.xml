@@ -39,6 +39,7 @@
                     android:scheme="http" />
             </intent-filter>
         </activity>
+        <activity android:name="com.example.sami.diabetec.addEventActivity" />
 
         <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"
