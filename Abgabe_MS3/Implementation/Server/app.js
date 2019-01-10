@@ -11,7 +11,8 @@ app.use(bodyParser.json());
 const settings = {
     port: 3000,
     dexcom_data: './dexcom_data.json',
-    user_events: './user_events.json'
+    user_events: './user_events.json',
+    user_Authorization: './user_Authorization.json'
 };
 
 app.use(function(err, req, res, next){
@@ -27,36 +28,92 @@ app.use(function(req, res, next){
 
 //POST /dexcomValues
 app.post('/dexcomValues', bodyParser.json(), function(req, res){
-    fs.readFile(settings.dexcom_data, function(err, data){
-        var decxomValues = JSON.parse(data);
-        var start = req.body.start;
-        var end = req.body.end;
+    
+        //var start = req.body.start;
+        //var end = req.body.end;
+    
+    var newUserAuthorization;
+    
+    //refresh token
+    fs.readFile(settings.user_Authorization, function(err, data){
+        var userAuthorization = JSON.parse(data);
+        var refreshToken = userAuthorization.refresh_token;
         
-        var dexcomOptions = {
-            "method": "GET",
+        console.log(JSON.stringify(userAuthorization.refresh_token));
+        
+        var refreshOptions = {
+            "method": "POST",
             "hostname": "api.dexcom.com",
             "port": null,
-            "path": "/v2/users/self/egvs?startDate=" + start + "&endDate=" + end,
+            "path": "/v2/oauth2/token",
             "headers": {
-                "authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IncyYUVpQmRlMXBfNnNjZmMzXzFpeHFvaDVqTSIsImtpZCI6IncyYUVpQmRlMXBfNnNjZmMzXzFpeHFvaDVqTSJ9.eyJpc3MiOiJodHRwczovL3VhbTEuZGV4Y29tLmNvbS9pZGVudGl0eSIsImF1ZCI6Imh0dHBzOi8vdWFtMS5kZXhjb20uY29tL2lkZW50aXR5L3Jlc291cmNlcyIsImV4cCI6MTU0NjE5OTMxMSwibmJmIjoxNTQ2MTk4NzExLCJjbGllbnRfaWQiOiJMaUliYmdzQnRyN1ZxcFlrTkJ2ZVhhT3M5dnpkbkd0dyIsInNjb3BlIjpbIm9mZmxpbmVfYWNjZXNzIiwiZWd2IiwiY2FsaWJyYXRpb24iLCJkZXZpY2UiLCJzdGF0aXN0aWNzIiwiZXZlbnQiXSwic3ViIjoiZjA3YTkyMGQtNmFjYS00ZjFkLWI4MmUtMzllYjAzOWJjOGNkIiwiYXV0aF90aW1lIjoxNTQ2MTg4NTUwLCJpZHAiOiJpZHNydiIsImp0aSI6ImQ2MzFlNTJkYzQyZDE2ZDk4YjQ1MDU0MTlmYmI2ZWFhIiwiYW1yIjpbInBhc3N3b3JkIl19.gBGbOnxz0mWWTk577qfM1T013vXEaNcuBj192pbq5XUeGeqDaYCN4U2_BFLR2ioTjwkTAl-DEPcuS5x3Gw1545OuDGN_pmpjqRfy40jBNs9W2lcT6gQSUq3WKulIPO1poNxhn9PH4n-k1W6wMGcf45GUYDFL5VchLg9BuFF0H3CKEZkPOkn4G5pbliWI6bWZWupRC8t_TypjDpv2KPv8TuIjNH1dtygv247w6Fnb6qa2QULBn2lLUWJX0Ah35JgOMKGkG9G4iLbOe7yJv8NX-MHtB510DAJhNzzXJFBuOqMcfYSX0NOF16SjOm78fVBNfKEHndLX1Y_vLZHKAfS1aA",
+            "content-type": "application/x-www-form-urlencoded",
+            "cache-control": "no-cache"
             }
         };
-        
-        var dexcomReq = dexcomHTTP.request(dexcomOptions, function (res) {
+
+        var req = dexcomHTTP.request(refreshOptions, function (res) {
             var chunks = [];
 
             res.on("data", function (chunk) {
-                chunks.push(chunk);
-            });
+            chunks.push(chunk);
+        });
 
             res.on("end", function () {
-                var dexcomValues = Buffer.concat(chunks);
-                console.log(dexcomValues.toString());
-            fs.writeFile(settings.dexcom_data, JSON.stringify(JSON.parse(dexcomValues.toString()), null, 2));
+                newUserAuthorization = Buffer.concat(chunks);
+                console.log(newUserAuthorization.toString());
+                fs.writeFile(settings.user_Authorization, JSON.stringify(JSON.parse(newUserAuthorization.toString()), null, 2));
+                
             });
-            
         });
-        dexcomReq.end();
+        
+        
+        
+        req.write(qs.stringify({ 
+            client_secret: 'KkHFiwdepfGE3Pox',
+            client_id: 'LiIbbgsBtr7VqpYkNBveXaOs9vzdnGtw',
+            refresh_token:  refreshToken,
+            grant_type: 'refresh_token',
+            redirect_uri: 'https://wba2.herokuapp.com' }));
+        req.end();
+        
+    });
+    
+    console.log("test");
+    //get dexcom_data
+    fs.readFile(settings.user_Authorization, function(err, data){
+        var userAuthorization = JSON.parse(data);
+        
+        fs.readFile(settings.dexcom_data, function(err, data){
+           
+
+            var dexcomOptions = {
+                "method": "GET",
+                "hostname": "api.dexcom.com",
+                "port": null,
+                "path": "/v2/users/self/egvs?startDate=2018-12-16T15:30:00&endDate=2018-12-16T15:45:00",
+                "headers": {
+                    "authorization": "Bearer " + userAuthorization.access_token,
+                    }
+            };
+
+            var req = dexcomHTTP.request(dexcomOptions, function (res) {
+                var chunks = [];
+
+                res.on("data", function (chunk) {
+                    chunks.push(chunk);
+                });
+
+                res.on("end", function () {
+                    var dexcomValues = Buffer.concat(chunks);
+                    console.log(dexcomValues.toString());
+                    fs.writeFile(settings.dexcom_data, JSON.stringify(JSON.parse(dexcomValues.toString()), null, 2));
+                });
+            });
+
+            req.end();
+          
+        });
     });
 });
 

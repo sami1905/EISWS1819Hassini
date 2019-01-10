@@ -3,36 +3,6 @@
   "rateUnit": "mg/dL/min",
   "egvs": [
     {
-      "systemTime": "2018-12-16T15:58:05",
-      "displayTime": "2018-12-16T07:58:04",
-      "value": 115,
-      "status": null,
-      "trend": "flat",
-      "trendRate": -0.2,
-      "realtimeValue": 115,
-      "smoothedValue": 115
-    },
-    {
-      "systemTime": "2018-12-16T15:53:05",
-      "displayTime": "2018-12-16T07:53:05",
-      "value": 117,
-      "status": null,
-      "trend": "flat",
-      "trendRate": -0.2,
-      "realtimeValue": 117,
-      "smoothedValue": 117
-    },
-    {
-      "systemTime": "2018-12-16T15:48:04",
-      "displayTime": "2018-12-16T07:48:03",
-      "value": 118,
-      "status": null,
-      "trend": "flat",
-      "trendRate": -0.2,
-      "realtimeValue": 119,
-      "smoothedValue": 118
-    },
-    {
       "systemTime": "2018-12-16T15:43:05",
       "displayTime": "2018-12-16T07:43:04",
       "value": 119,
