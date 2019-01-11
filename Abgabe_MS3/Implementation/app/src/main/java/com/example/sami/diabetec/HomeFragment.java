@@ -47,12 +47,16 @@ public class HomeFragment extends Fragment {
 
     private Button dexcomButton;
     private Button addEventButton;
-    private TextView textViewResult;
+    private TextView lastValue;
     private JsonPlaceHolderApi jsonPlaceHolderApi;
     //Values hinzufügen
     ArrayList<Entry> yValues = new ArrayList<>();
 
     int[] dv = new int[288];
+
+
+
+
 
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
     String date = sdf.format(new Date());
@@ -66,8 +70,15 @@ public class HomeFragment extends Fragment {
 
         dexcomButton = view.findViewById(R.id.button_dexcom);
         addEventButton = view.findViewById(R.id.button_addEvent);
-        textViewResult = view.findViewById(R.id.text_view_resultHome);
+        lastValue = view.findViewById(R.id.last_value);
         mChart = view.findViewById(R.id.lineChart);
+
+
+
+        for (int i = 0; i < dv.length; ++i)
+        {
+            dv[i] = 500;
+        }
 
         Retrofit retrofit = new Retrofit.Builder().baseUrl("http://192.168.0.10:3000/").
                 addConverterFactory(GsonConverterFactory.create()).build();
@@ -179,7 +190,7 @@ public class HomeFragment extends Fragment {
             public void onResponse(Call<List<DexcomValues>> call, Response<List<DexcomValues>> response) {
 
                 if(!response.isSuccessful()){
-                    textViewResult.setText("Code: " + response.code());
+                    lastValue.setText("Code: " + response.code());
                     return;
                 }
 
@@ -191,22 +202,31 @@ public class HomeFragment extends Fragment {
                 String dateOfToday = dot.format(new Date());
 
 
+                String content = "Letzter Blutzuckerwert: \n";
+
+
+
                 for (DexcomValues dexcomValue : dexcomValues) {
 
-                    String content = "";
-                    content += "Date: " + dexcomValue.getDate() + "\n";
-                    content += "Blutzuckerwert: " + dexcomValue.getValue() + "\n\n";
+
+                    if(content.equals("Letzter Blutzuckerwert: \n")){
+                        content += "Date: " + dexcomValue.getDate() + "\n";
+                        content += "Blutzuckerwert: " + dexcomValue.getValue() + "\n\n";
+                    }
 
 
 
                     if(dexcomValue.getDate().substring(0,10).equals(dateOfToday) ){
                         dv[i] = dexcomValue.getValue();
 
+
                     }
 
-                    textViewResult.append(content);
-
                     yValues.add(new Entry(x, dv[i++]));
+
+
+
+
 
 
                     x = x + 0.0833f;
@@ -229,10 +249,11 @@ public class HomeFragment extends Fragment {
 
 
                 }
+                lastValue.append(content);
             }
             @Override
             public void onFailure(Call<List<DexcomValues>> call, Throwable t) {
-                textViewResult.setText(t.getMessage());
+                lastValue.setText(t.getMessage());
             }
 
 
