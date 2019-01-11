@@ -185,7 +185,11 @@ public class HomeFragment extends Fragment {
 
                 List<DexcomValues> dexcomValues = response.body();
                 int i = 0;
-                float x = 1.0f;
+                float x = 1;
+
+                SimpleDateFormat dot = new SimpleDateFormat("yyyy-MM-dd");
+                String dateOfToday = dot.format(new Date());
+
 
                 for (DexcomValues dexcomValue : dexcomValues) {
 
@@ -193,13 +197,19 @@ public class HomeFragment extends Fragment {
                     content += "Date: " + dexcomValue.getDate() + "\n";
                     content += "Blutzuckerwert: " + dexcomValue.getValue() + "\n\n";
 
-                    dv[i] = dexcomValue.getValue();
+
+
+                    if(dexcomValue.getDate().substring(0,10).equals(dateOfToday) ){
+                        dv[i] = dexcomValue.getValue();
+
+                    }
 
                     textViewResult.append(content);
 
                     yValues.add(new Entry(x, dv[i++]));
 
-                    x = x + 0.08333f;
+
+                    x = x + 0.0833f;
 
 
 

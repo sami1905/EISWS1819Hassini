@@ -93,7 +93,7 @@ app.post('/dexcomValues/:date', bodyParser.json(), function(req, res){
                 "method": "GET",
                 "hostname": "api.dexcom.com",
                 "port": null,
-                "path": "/v2/users/self/egvs?startDate=2019-01-11T00:00:00&endDate=" + date,
+                "path": "/v2/users/self/egvs?startDate=2019-01-10T00:00:00&endDate=" + date,
                 "headers": {
                     "authorization": "Bearer " + userAuthorization.access_token,
                     }

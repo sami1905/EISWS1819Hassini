@@ -821,6 +821,1736 @@
       "trendRate": 1.5,
       "realtimeValue": 121,
       "smoothedValue": null
+    },
+    {
+      "systemTime": "2019-01-10T14:22:04",
+      "displayTime": "2019-01-10T06:22:04",
+      "value": 109,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.4,
+      "realtimeValue": 109,
+      "smoothedValue": null
+    },
+    {
+      "systemTime": "2019-01-10T14:17:03",
+      "displayTime": "2019-01-10T06:17:02",
+      "value": 109,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.5,
+      "realtimeValue": 108,
+      "smoothedValue": 109
+    },
+    {
+      "systemTime": "2019-01-10T14:12:04",
+      "displayTime": "2019-01-10T06:12:03",
+      "value": 105,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.6,
+      "realtimeValue": 109,
+      "smoothedValue": 105
+    },
+    {
+      "systemTime": "2019-01-10T14:07:04",
+      "displayTime": "2019-01-10T06:07:03",
+      "value": 103,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.2,
+      "realtimeValue": 99,
+      "smoothedValue": 103
+    },
+    {
+      "systemTime": "2019-01-10T14:02:04",
+      "displayTime": "2019-01-10T06:02:04",
+      "value": 97,
+      "status": null,
+      "trend": "notComputable",
+      "trendRate": null,
+      "realtimeValue": 102,
+      "smoothedValue": 97
+    },
+    {
+      "systemTime": "2019-01-10T13:57:04",
+      "displayTime": "2019-01-10T05:57:03",
+      "value": 90,
+      "status": null,
+      "trend": "notComputable",
+      "trendRate": null,
+      "realtimeValue": 90,
+      "smoothedValue": 90
+    },
+    {
+      "systemTime": "2019-01-10T13:52:04",
+      "displayTime": "2019-01-10T05:52:04",
+      "value": 81,
+      "status": null,
+      "trend": "notComputable",
+      "trendRate": null,
+      "realtimeValue": 78,
+      "smoothedValue": 81
+    },
+    {
+      "systemTime": "2019-01-10T13:47:03",
+      "displayTime": "2019-01-10T05:47:02",
+      "value": 79,
+      "status": null,
+      "trend": "notComputable",
+      "trendRate": null,
+      "realtimeValue": 76,
+      "smoothedValue": 79
+    },
+    {
+      "systemTime": "2019-01-10T13:42:04",
+      "displayTime": "2019-01-10T05:42:04",
+      "value": 81,
+      "status": null,
+      "trend": "notComputable",
+      "trendRate": null,
+      "realtimeValue": 84,
+      "smoothedValue": 81
+    },
+    {
+      "systemTime": "2019-01-10T13:37:04",
+      "displayTime": "2019-01-10T05:37:03",
+      "value": 91,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.5,
+      "realtimeValue": 84,
+      "smoothedValue": 91
+    },
+    {
+      "systemTime": "2019-01-10T13:32:05",
+      "displayTime": "2019-01-10T05:32:05",
+      "value": 98,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.4,
+      "realtimeValue": 105,
+      "smoothedValue": 98
+    },
+    {
+      "systemTime": "2019-01-10T13:27:04",
+      "displayTime": "2019-01-10T05:27:04",
+      "value": 108,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.3,
+      "realtimeValue": 106,
+      "smoothedValue": 108
+    },
+    {
+      "systemTime": "2019-01-10T13:22:04",
+      "displayTime": "2019-01-10T05:22:03",
+      "value": 112,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.1,
+      "realtimeValue": 114,
+      "smoothedValue": 112
+    },
+    {
+      "systemTime": "2019-01-10T13:17:04",
+      "displayTime": "2019-01-10T05:17:03",
+      "value": 114,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.2,
+      "realtimeValue": 115,
+      "smoothedValue": 114
+    },
+    {
+      "systemTime": "2019-01-10T13:12:04",
+      "displayTime": "2019-01-10T05:12:03",
+      "value": 114,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.3,
+      "realtimeValue": 114,
+      "smoothedValue": 114
+    },
+    {
+      "systemTime": "2019-01-10T13:07:03",
+      "displayTime": "2019-01-10T05:07:02",
+      "value": 113,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.3,
+      "realtimeValue": 114,
+      "smoothedValue": 113
+    },
+    {
+      "systemTime": "2019-01-10T13:02:04",
+      "displayTime": "2019-01-10T05:02:04",
+      "value": 111,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.1,
+      "realtimeValue": 110,
+      "smoothedValue": 111
+    },
+    {
+      "systemTime": "2019-01-10T12:57:04",
+      "displayTime": "2019-01-10T04:57:03",
+      "value": 109,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0,
+      "realtimeValue": 109,
+      "smoothedValue": 109
+    },
+    {
+      "systemTime": "2019-01-10T12:52:05",
+      "displayTime": "2019-01-10T04:52:05",
+      "value": 108,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0,
+      "realtimeValue": 108,
+      "smoothedValue": 108
+    },
+    {
+      "systemTime": "2019-01-10T12:47:04",
+      "displayTime": "2019-01-10T04:47:04",
+      "value": 108,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.1,
+      "realtimeValue": 108,
+      "smoothedValue": 108
+    },
+    {
+      "systemTime": "2019-01-10T12:42:04",
+      "displayTime": "2019-01-10T04:42:04",
+      "value": 108,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0,
+      "realtimeValue": 107,
+      "smoothedValue": 108
+    },
+    {
+      "systemTime": "2019-01-10T12:37:04",
+      "displayTime": "2019-01-10T04:37:04",
+      "value": 107,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.1,
+      "realtimeValue": 110,
+      "smoothedValue": 107
+    },
+    {
+      "systemTime": "2019-01-10T12:32:04",
+      "displayTime": "2019-01-10T04:32:04",
+      "value": 107,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.1,
+      "realtimeValue": 104,
+      "smoothedValue": 107
+    },
+    {
+      "systemTime": "2019-01-10T12:27:04",
+      "displayTime": "2019-01-10T04:27:04",
+      "value": 107,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.1,
+      "realtimeValue": 108,
+      "smoothedValue": 107
+    },
+    {
+      "systemTime": "2019-01-10T12:22:04",
+      "displayTime": "2019-01-10T04:22:03",
+      "value": 108,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.3,
+      "realtimeValue": 109,
+      "smoothedValue": 108
+    },
+    {
+      "systemTime": "2019-01-10T12:17:04",
+      "displayTime": "2019-01-10T04:17:04",
+      "value": 108,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.3,
+      "realtimeValue": 107,
+      "smoothedValue": 108
+    },
+    {
+      "systemTime": "2019-01-10T12:12:04",
+      "displayTime": "2019-01-10T04:12:04",
+      "value": 108,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.6,
+      "realtimeValue": 109,
+      "smoothedValue": 108
+    },
+    {
+      "systemTime": "2019-01-10T12:07:04",
+      "displayTime": "2019-01-10T04:07:04",
+      "value": 107,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.8,
+      "realtimeValue": 107,
+      "smoothedValue": 107
+    },
+    {
+      "systemTime": "2019-01-10T12:02:04",
+      "displayTime": "2019-01-10T04:02:04",
+      "value": 105,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.8,
+      "realtimeValue": 106,
+      "smoothedValue": 105
+    },
+    {
+      "systemTime": "2019-01-10T11:57:04",
+      "displayTime": "2019-01-10T03:57:04",
+      "value": 100,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.7,
+      "realtimeValue": 102,
+      "smoothedValue": 100
+    },
+    {
+      "systemTime": "2019-01-10T11:52:05",
+      "displayTime": "2019-01-10T03:52:04",
+      "value": 95,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.2,
+      "realtimeValue": 92,
+      "smoothedValue": 95
+    },
+    {
+      "systemTime": "2019-01-10T11:47:04",
+      "displayTime": "2019-01-10T03:47:03",
+      "value": 90,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.2,
+      "realtimeValue": 90,
+      "smoothedValue": 90
+    },
+    {
+      "systemTime": "2019-01-10T11:42:04",
+      "displayTime": "2019-01-10T03:42:03",
+      "value": 89,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.1,
+      "realtimeValue": 89,
+      "smoothedValue": 89
+    },
+    {
+      "systemTime": "2019-01-10T11:37:03",
+      "displayTime": "2019-01-10T03:37:02",
+      "value": 88,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.1,
+      "realtimeValue": 88,
+      "smoothedValue": 88
+    },
+    {
+      "systemTime": "2019-01-10T11:32:05",
+      "displayTime": "2019-01-10T03:32:04",
+      "value": 86,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.1,
+      "realtimeValue": 86,
+      "smoothedValue": 86
+    },
+    {
+      "systemTime": "2019-01-10T11:27:04",
+      "displayTime": "2019-01-10T03:27:03",
+      "value": 83,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.5,
+      "realtimeValue": 83,
+      "smoothedValue": 83
+    },
+    {
+      "systemTime": "2019-01-10T11:22:04",
+      "displayTime": "2019-01-10T03:22:04",
+      "value": 81,
+      "status": null,
+      "trend": "fortyFiveDown",
+      "trendRate": -1,
+      "realtimeValue": 80,
+      "smoothedValue": 81
+    },
+    {
+      "systemTime": "2019-01-10T11:17:04",
+      "displayTime": "2019-01-10T03:17:03",
+      "value": 83,
+      "status": null,
+      "trend": "fortyFiveDown",
+      "trendRate": -1.3,
+      "realtimeValue": 80,
+      "smoothedValue": 83
+    },
+    {
+      "systemTime": "2019-01-10T11:12:04",
+      "displayTime": "2019-01-10T03:12:03",
+      "value": 89,
+      "status": null,
+      "trend": "fortyFiveDown",
+      "trendRate": -1,
+      "realtimeValue": 88,
+      "smoothedValue": 89
+    },
+    {
+      "systemTime": "2019-01-10T11:07:04",
+      "displayTime": "2019-01-10T03:07:04",
+      "value": 97,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.5,
+      "realtimeValue": 99,
+      "smoothedValue": 97
+    },
+    {
+      "systemTime": "2019-01-10T11:02:04",
+      "displayTime": "2019-01-10T03:02:03",
+      "value": 105,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.3,
+      "realtimeValue": 104,
+      "smoothedValue": 105
+    },
+    {
+      "systemTime": "2019-01-10T10:57:04",
+      "displayTime": "2019-01-10T02:57:04",
+      "value": 107,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.2,
+      "realtimeValue": 111,
+      "smoothedValue": 107
+    },
+    {
+      "systemTime": "2019-01-10T10:52:05",
+      "displayTime": "2019-01-10T02:52:04",
+      "value": 111,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.2,
+      "realtimeValue": 107,
+      "smoothedValue": 111
+    },
+    {
+      "systemTime": "2019-01-10T10:47:04",
+      "displayTime": "2019-01-10T02:47:04",
+      "value": 111,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.8,
+      "realtimeValue": 115,
+      "smoothedValue": 111
+    },
+    {
+      "systemTime": "2019-01-10T10:42:04",
+      "displayTime": "2019-01-10T02:42:04",
+      "value": 110,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.6,
+      "realtimeValue": 112,
+      "smoothedValue": 110
+    },
+    {
+      "systemTime": "2019-01-10T10:37:04",
+      "displayTime": "2019-01-10T02:37:03",
+      "value": 102,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.4,
+      "realtimeValue": 103,
+      "smoothedValue": 102
+    },
+    {
+      "systemTime": "2019-01-10T10:32:04",
+      "displayTime": "2019-01-10T02:32:04",
+      "value": 95,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.7,
+      "realtimeValue": 92,
+      "smoothedValue": 95
+    },
+    {
+      "systemTime": "2019-01-10T10:27:04",
+      "displayTime": "2019-01-10T02:27:03",
+      "value": 91,
+      "status": null,
+      "trend": "none",
+      "trendRate": -1,
+      "realtimeValue": 89,
+      "smoothedValue": 91
+    },
+    {
+      "systemTime": "2019-01-10T10:22:04",
+      "displayTime": "2019-01-10T02:22:03",
+      "value": 86,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.8,
+      "realtimeValue": 92,
+      "smoothedValue": 86
+    },
+    {
+      "systemTime": "2019-01-10T10:17:04",
+      "displayTime": "2019-01-10T02:17:04",
+      "value": 89,
+      "status": null,
+      "trend": "fortyFiveDown",
+      "trendRate": -1.5,
+      "realtimeValue": 78,
+      "smoothedValue": 89
+    },
+    {
+      "systemTime": "2019-01-10T10:12:04",
+      "displayTime": "2019-01-10T02:12:04",
+      "value": 95,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.7,
+      "realtimeValue": 97,
+      "smoothedValue": 95
+    },
+    {
+      "systemTime": "2019-01-10T10:07:04",
+      "displayTime": "2019-01-10T02:07:03",
+      "value": 106,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0,
+      "realtimeValue": 110,
+      "smoothedValue": 106
+    },
+    {
+      "systemTime": "2019-01-10T10:02:04",
+      "displayTime": "2019-01-10T02:02:03",
+      "value": 110,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.1,
+      "realtimeValue": 110,
+      "smoothedValue": 110
+    },
+    {
+      "systemTime": "2019-01-10T09:57:04",
+      "displayTime": "2019-01-10T01:57:04",
+      "value": 111,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.2,
+      "realtimeValue": 111,
+      "smoothedValue": 111
+    },
+    {
+      "systemTime": "2019-01-10T09:52:04",
+      "displayTime": "2019-01-10T01:52:04",
+      "value": 110,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.2,
+      "realtimeValue": 111,
+      "smoothedValue": 110
+    },
+    {
+      "systemTime": "2019-01-10T09:47:05",
+      "displayTime": "2019-01-10T01:47:04",
+      "value": 109,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.1,
+      "realtimeValue": 109,
+      "smoothedValue": 109
+    },
+    {
+      "systemTime": "2019-01-10T09:42:04",
+      "displayTime": "2019-01-10T01:42:04",
+      "value": 107,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.1,
+      "realtimeValue": 107,
+      "smoothedValue": 107
+    },
+    {
+      "systemTime": "2019-01-10T09:37:04",
+      "displayTime": "2019-01-10T01:37:04",
+      "value": 105,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.5,
+      "realtimeValue": 104,
+      "smoothedValue": 105
+    },
+    {
+      "systemTime": "2019-01-10T09:32:04",
+      "displayTime": "2019-01-10T01:32:04",
+      "value": 104,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.8,
+      "realtimeValue": 103,
+      "smoothedValue": 104
+    },
+    {
+      "systemTime": "2019-01-10T09:27:04",
+      "displayTime": "2019-01-10T01:27:03",
+      "value": 106,
+      "status": null,
+      "trend": "fortyFiveDown",
+      "trendRate": -1,
+      "realtimeValue": 104,
+      "smoothedValue": 106
+    },
+    {
+      "systemTime": "2019-01-10T09:22:03",
+      "displayTime": "2019-01-10T01:22:02",
+      "value": 110,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.6,
+      "realtimeValue": 111,
+      "smoothedValue": 110
+    },
+    {
+      "systemTime": "2019-01-10T09:17:04",
+      "displayTime": "2019-01-10T01:17:03",
+      "value": 113,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.8,
+      "realtimeValue": 114,
+      "smoothedValue": 113
+    },
+    {
+      "systemTime": "2019-01-10T09:12:04",
+      "displayTime": "2019-01-10T01:12:04",
+      "value": 115,
+      "status": null,
+      "trend": "fortyFiveDown",
+      "trendRate": -1.2,
+      "realtimeValue": 114,
+      "smoothedValue": 115
+    },
+    {
+      "systemTime": "2019-01-10T09:07:04",
+      "displayTime": "2019-01-10T01:07:04",
+      "value": 113,
+      "status": null,
+      "trend": "fortyFiveDown",
+      "trendRate": -1.1,
+      "realtimeValue": 118,
+      "smoothedValue": 113
+    },
+    {
+      "systemTime": "2019-01-10T09:02:04",
+      "displayTime": "2019-01-10T01:02:04",
+      "value": 114,
+      "status": null,
+      "trend": "fortyFiveDown",
+      "trendRate": -1.8,
+      "realtimeValue": 106,
+      "smoothedValue": 114
+    },
+    {
+      "systemTime": "2019-01-10T08:57:04",
+      "displayTime": "2019-01-10T00:57:03",
+      "value": 121,
+      "status": null,
+      "trend": "fortyFiveDown",
+      "trendRate": -1.2,
+      "realtimeValue": 119,
+      "smoothedValue": 121
+    },
+    {
+      "systemTime": "2019-01-10T08:52:04",
+      "displayTime": "2019-01-10T00:52:04",
+      "value": 132,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.4,
+      "realtimeValue": 137,
+      "smoothedValue": 132
+    },
+    {
+      "systemTime": "2019-01-10T08:47:04",
+      "displayTime": "2019-01-10T00:47:03",
+      "value": 140,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.3,
+      "realtimeValue": 140,
+      "smoothedValue": 140
+    },
+    {
+      "systemTime": "2019-01-10T08:42:04",
+      "displayTime": "2019-01-10T00:42:04",
+      "value": 142,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.2,
+      "realtimeValue": 143,
+      "smoothedValue": 142
+    },
+    {
+      "systemTime": "2019-01-10T08:37:04",
+      "displayTime": "2019-01-10T00:37:04",
+      "value": 144,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.2,
+      "realtimeValue": 144,
+      "smoothedValue": 144
+    },
+    {
+      "systemTime": "2019-01-10T08:32:04",
+      "displayTime": "2019-01-10T00:32:04",
+      "value": 145,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.2,
+      "realtimeValue": 145,
+      "smoothedValue": 145
+    },
+    {
+      "systemTime": "2019-01-10T08:27:04",
+      "displayTime": "2019-01-10T00:27:04",
+      "value": 146,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.1,
+      "realtimeValue": 147,
+      "smoothedValue": 146
+    },
+    {
+      "systemTime": "2019-01-10T08:22:04",
+      "displayTime": "2019-01-10T00:22:03",
+      "value": 147,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.3,
+      "realtimeValue": 146,
+      "smoothedValue": 147
+    },
+    {
+      "systemTime": "2019-01-10T08:17:05",
+      "displayTime": "2019-01-10T00:17:04",
+      "value": 147,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.3,
+      "realtimeValue": 147,
+      "smoothedValue": 147
+    },
+    {
+      "systemTime": "2019-01-10T08:12:05",
+      "displayTime": "2019-01-10T00:12:04",
+      "value": 147,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.5,
+      "realtimeValue": 147,
+      "smoothedValue": 147
+    },
+    {
+      "systemTime": "2019-01-10T08:07:05",
+      "displayTime": "2019-01-10T00:07:04",
+      "value": 149,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.5,
+      "realtimeValue": 148,
+      "smoothedValue": 149
+    },
+    {
+      "systemTime": "2019-01-10T08:02:04",
+      "displayTime": "2019-01-10T00:02:04",
+      "value": 151,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.4,
+      "realtimeValue": 152,
+      "smoothedValue": 151
+    },
+    {
+      "systemTime": "2019-01-10T07:57:04",
+      "displayTime": "2019-01-09T23:57:04",
+      "value": 154,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.4,
+      "realtimeValue": 154,
+      "smoothedValue": 154
+    },
+    {
+      "systemTime": "2019-01-10T07:52:04",
+      "displayTime": "2019-01-09T23:52:04",
+      "value": 156,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.4,
+      "realtimeValue": 156,
+      "smoothedValue": 156
+    },
+    {
+      "systemTime": "2019-01-10T07:47:04",
+      "displayTime": "2019-01-09T23:47:03",
+      "value": 158,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.3,
+      "realtimeValue": 158,
+      "smoothedValue": 158
+    },
+    {
+      "systemTime": "2019-01-10T07:42:04",
+      "displayTime": "2019-01-09T23:42:03",
+      "value": 160,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.2,
+      "realtimeValue": 161,
+      "smoothedValue": 160
+    },
+    {
+      "systemTime": "2019-01-10T07:37:05",
+      "displayTime": "2019-01-09T23:37:05",
+      "value": 162,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.3,
+      "realtimeValue": 162,
+      "smoothedValue": 162
+    },
+    {
+      "systemTime": "2019-01-10T07:32:04",
+      "displayTime": "2019-01-09T23:32:03",
+      "value": 163,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.4,
+      "realtimeValue": 162,
+      "smoothedValue": 163
+    },
+    {
+      "systemTime": "2019-01-10T07:27:04",
+      "displayTime": "2019-01-09T23:27:04",
+      "value": 164,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.4,
+      "realtimeValue": 164,
+      "smoothedValue": 164
+    },
+    {
+      "systemTime": "2019-01-10T07:22:04",
+      "displayTime": "2019-01-09T23:22:04",
+      "value": 166,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.5,
+      "realtimeValue": 165,
+      "smoothedValue": 166
+    },
+    {
+      "systemTime": "2019-01-10T07:17:04",
+      "displayTime": "2019-01-09T23:17:04",
+      "value": 167,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.6,
+      "realtimeValue": 168,
+      "smoothedValue": 167
+    },
+    {
+      "systemTime": "2019-01-10T07:12:04",
+      "displayTime": "2019-01-09T23:12:04",
+      "value": 170,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.6,
+      "realtimeValue": 169,
+      "smoothedValue": 170
+    },
+    {
+      "systemTime": "2019-01-10T07:07:04",
+      "displayTime": "2019-01-09T23:07:04",
+      "value": 172,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.7,
+      "realtimeValue": 172,
+      "smoothedValue": 172
+    },
+    {
+      "systemTime": "2019-01-10T07:02:04",
+      "displayTime": "2019-01-09T23:02:04",
+      "value": 175,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.7,
+      "realtimeValue": 176,
+      "smoothedValue": 175
+    },
+    {
+      "systemTime": "2019-01-10T06:57:05",
+      "displayTime": "2019-01-09T22:57:04",
+      "value": 178,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.7,
+      "realtimeValue": 178,
+      "smoothedValue": 178
+    },
+    {
+      "systemTime": "2019-01-10T06:52:04",
+      "displayTime": "2019-01-09T22:52:04",
+      "value": 181,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.8,
+      "realtimeValue": 181,
+      "smoothedValue": 181
+    },
+    {
+      "systemTime": "2019-01-10T06:47:05",
+      "displayTime": "2019-01-09T22:47:04",
+      "value": 185,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.8,
+      "realtimeValue": 185,
+      "smoothedValue": 185
+    },
+    {
+      "systemTime": "2019-01-10T06:42:05",
+      "displayTime": "2019-01-09T22:42:04",
+      "value": 189,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.8,
+      "realtimeValue": 189,
+      "smoothedValue": 189
+    },
+    {
+      "systemTime": "2019-01-10T06:37:04",
+      "displayTime": "2019-01-09T22:37:03",
+      "value": 192,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.9,
+      "realtimeValue": 192,
+      "smoothedValue": 192
+    },
+    {
+      "systemTime": "2019-01-10T06:32:04",
+      "displayTime": "2019-01-09T22:32:04",
+      "value": 197,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.9,
+      "realtimeValue": 196,
+      "smoothedValue": 197
+    },
+    {
+      "systemTime": "2019-01-10T06:27:04",
+      "displayTime": "2019-01-09T22:27:03",
+      "value": 202,
+      "status": null,
+      "trend": "none",
+      "trendRate": -0.7,
+      "realtimeValue": 202,
+      "smoothedValue": 202
+    },
+    {
+      "systemTime": "2019-01-10T06:22:04",
+      "displayTime": "2019-01-09T22:22:04",
+      "value": 207,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.6,
+      "realtimeValue": 207,
+      "smoothedValue": 207
+    },
+    {
+      "systemTime": "2019-01-10T06:17:04",
+      "displayTime": "2019-01-09T22:17:04",
+      "value": 211,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.4,
+      "realtimeValue": 213,
+      "smoothedValue": 211
+    },
+    {
+      "systemTime": "2019-01-10T06:12:04",
+      "displayTime": "2019-01-09T22:12:04",
+      "value": 214,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.5,
+      "realtimeValue": 214,
+      "smoothedValue": 214
+    },
+    {
+      "systemTime": "2019-01-10T06:07:04",
+      "displayTime": "2019-01-09T22:07:04",
+      "value": 216,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.6,
+      "realtimeValue": 215,
+      "smoothedValue": 216
+    },
+    {
+      "systemTime": "2019-01-10T06:02:04",
+      "displayTime": "2019-01-09T22:02:04",
+      "value": 219,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.5,
+      "realtimeValue": 218,
+      "smoothedValue": 219
+    },
+    {
+      "systemTime": "2019-01-10T05:57:04",
+      "displayTime": "2019-01-09T21:57:03",
+      "value": 226,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.1,
+      "realtimeValue": 224,
+      "smoothedValue": 226
+    },
+    {
+      "systemTime": "2019-01-10T05:52:04",
+      "displayTime": "2019-01-09T21:52:03",
+      "value": 231,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.8,
+      "realtimeValue": 235,
+      "smoothedValue": 231
+    },
+    {
+      "systemTime": "2019-01-10T05:47:04",
+      "displayTime": "2019-01-09T21:47:04",
+      "value": 236,
+      "status": null,
+      "trend": "fortyFiveUp",
+      "trendRate": 1.4,
+      "realtimeValue": 235,
+      "smoothedValue": 236
+    },
+    {
+      "systemTime": "2019-01-10T05:42:05",
+      "displayTime": "2019-01-09T21:42:04",
+      "value": 236,
+      "status": null,
+      "trend": "singleUp",
+      "trendRate": 2.3,
+      "realtimeValue": 239,
+      "smoothedValue": 236
+    },
+    {
+      "systemTime": "2019-01-10T05:37:04",
+      "displayTime": "2019-01-09T21:37:04",
+      "value": 232,
+      "status": null,
+      "trend": "singleUp",
+      "trendRate": 2.9,
+      "realtimeValue": 234,
+      "smoothedValue": 232
+    },
+    {
+      "systemTime": "2019-01-10T05:32:04",
+      "displayTime": "2019-01-09T21:32:04",
+      "value": 223,
+      "status": null,
+      "trend": "doubleUp",
+      "trendRate": 3.2,
+      "realtimeValue": 223,
+      "smoothedValue": 223
+    },
+    {
+      "systemTime": "2019-01-10T05:27:04",
+      "displayTime": "2019-01-09T21:27:04",
+      "value": 209,
+      "status": null,
+      "trend": "doubleUp",
+      "trendRate": 3.6,
+      "realtimeValue": 212,
+      "smoothedValue": 209
+    },
+    {
+      "systemTime": "2019-01-10T05:22:04",
+      "displayTime": "2019-01-09T21:22:03",
+      "value": 192,
+      "status": null,
+      "trend": "doubleUp",
+      "trendRate": 3.3,
+      "realtimeValue": 192,
+      "smoothedValue": 192
+    },
+    {
+      "systemTime": "2019-01-10T05:17:04",
+      "displayTime": "2019-01-09T21:17:04",
+      "value": 171,
+      "status": null,
+      "trend": "singleUp",
+      "trendRate": 2.8,
+      "realtimeValue": 173,
+      "smoothedValue": 171
+    },
+    {
+      "systemTime": "2019-01-10T05:12:04",
+      "displayTime": "2019-01-09T21:12:04",
+      "value": 150,
+      "status": null,
+      "trend": "fortyFiveUp",
+      "trendRate": 1.8,
+      "realtimeValue": 149,
+      "smoothedValue": 150
+    },
+    {
+      "systemTime": "2019-01-10T05:07:05",
+      "displayTime": "2019-01-09T21:07:04",
+      "value": 131,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.9,
+      "realtimeValue": 127,
+      "smoothedValue": 131
+    },
+    {
+      "systemTime": "2019-01-10T05:02:04",
+      "displayTime": "2019-01-09T21:02:04",
+      "value": 121,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.7,
+      "realtimeValue": 118,
+      "smoothedValue": 121
+    },
+    {
+      "systemTime": "2019-01-10T04:57:04",
+      "displayTime": "2019-01-09T20:57:04",
+      "value": 115,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.7,
+      "realtimeValue": 117,
+      "smoothedValue": 115
+    },
+    {
+      "systemTime": "2019-01-10T04:52:04",
+      "displayTime": "2019-01-09T20:52:03",
+      "value": 111,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.1,
+      "realtimeValue": 111,
+      "smoothedValue": 111
+    },
+    {
+      "systemTime": "2019-01-10T04:47:04",
+      "displayTime": "2019-01-09T20:47:03",
+      "value": 104,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.4,
+      "realtimeValue": 104,
+      "smoothedValue": 104
+    },
+    {
+      "systemTime": "2019-01-10T04:42:04",
+      "displayTime": "2019-01-09T20:42:04",
+      "value": 104,
+      "status": null,
+      "trend": "none",
+      "trendRate": -0.5,
+      "realtimeValue": 97,
+      "smoothedValue": 104
+    },
+    {
+      "systemTime": "2019-01-10T04:37:04",
+      "displayTime": "2019-01-09T20:37:04",
+      "value": 109,
+      "status": null,
+      "trend": "none",
+      "trendRate": 0.4,
+      "realtimeValue": 111,
+      "smoothedValue": 109
+    },
+    {
+      "systemTime": "2019-01-10T04:32:04",
+      "displayTime": "2019-01-09T20:32:04",
+      "value": 113,
+      "status": null,
+      "trend": "none",
+      "trendRate": 0.8,
+      "realtimeValue": 118,
+      "smoothedValue": 113
+    },
+    {
+      "systemTime": "2019-01-10T04:27:05",
+      "displayTime": "2019-01-09T20:27:04",
+      "value": 110,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.4,
+      "realtimeValue": 111,
+      "smoothedValue": 110
+    },
+    {
+      "systemTime": "2019-01-10T04:22:04",
+      "displayTime": "2019-01-09T20:22:04",
+      "value": 104,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.1,
+      "realtimeValue": 100,
+      "smoothedValue": 104
+    },
+    {
+      "systemTime": "2019-01-10T04:17:05",
+      "displayTime": "2019-01-09T20:17:04",
+      "value": 102,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0,
+      "realtimeValue": 100,
+      "smoothedValue": 102
+    },
+    {
+      "systemTime": "2019-01-10T04:12:04",
+      "displayTime": "2019-01-09T20:12:04",
+      "value": 105,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.6,
+      "realtimeValue": 105,
+      "smoothedValue": 105
+    },
+    {
+      "systemTime": "2019-01-10T04:07:05",
+      "displayTime": "2019-01-09T20:07:04",
+      "value": 107,
+      "status": null,
+      "trend": "fortyFiveUp",
+      "trendRate": 1,
+      "realtimeValue": 109,
+      "smoothedValue": 107
+    },
+    {
+      "systemTime": "2019-01-10T04:02:04",
+      "displayTime": "2019-01-09T20:02:04",
+      "value": 104,
+      "status": null,
+      "trend": "fortyFiveUp",
+      "trendRate": 1.2,
+      "realtimeValue": 106,
+      "smoothedValue": 104
+    },
+    {
+      "systemTime": "2019-01-10T03:57:04",
+      "displayTime": "2019-01-09T19:57:03",
+      "value": 99,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.9,
+      "realtimeValue": 96,
+      "smoothedValue": 99
+    },
+    {
+      "systemTime": "2019-01-10T03:52:04",
+      "displayTime": "2019-01-09T19:52:03",
+      "value": 92,
+      "status": null,
+      "trend": "fortyFiveUp",
+      "trendRate": 1.1,
+      "realtimeValue": 96,
+      "smoothedValue": 92
+    },
+    {
+      "systemTime": "2019-01-10T03:47:04",
+      "displayTime": "2019-01-09T19:47:04",
+      "value": 85,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.5,
+      "realtimeValue": 85,
+      "smoothedValue": 85
+    },
+    {
+      "systemTime": "2019-01-10T03:42:04",
+      "displayTime": "2019-01-09T19:42:04",
+      "value": 75,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.4,
+      "realtimeValue": 74,
+      "smoothedValue": 75
+    },
+    {
+      "systemTime": "2019-01-10T03:37:05",
+      "displayTime": "2019-01-09T19:37:04",
+      "value": 69,
+      "status": null,
+      "trend": "fortyFiveDown",
+      "trendRate": -1.2,
+      "realtimeValue": 67,
+      "smoothedValue": 69
+    },
+    {
+      "systemTime": "2019-01-10T03:32:04",
+      "displayTime": "2019-01-09T19:32:04",
+      "value": 67,
+      "status": null,
+      "trend": "fortyFiveDown",
+      "trendRate": -1.8,
+      "realtimeValue": 66,
+      "smoothedValue": 67
+    },
+    {
+      "systemTime": "2019-01-10T03:27:04",
+      "displayTime": "2019-01-09T19:27:04",
+      "value": 71,
+      "status": null,
+      "trend": "singleDown",
+      "trendRate": -2.2,
+      "realtimeValue": 69,
+      "smoothedValue": 71
+    },
+    {
+      "systemTime": "2019-01-10T03:22:04",
+      "displayTime": "2019-01-09T19:22:03",
+      "value": 80,
+      "status": null,
+      "trend": "singleDown",
+      "trendRate": -2.2,
+      "realtimeValue": 79,
+      "smoothedValue": 80
+    },
+    {
+      "systemTime": "2019-01-10T03:17:05",
+      "displayTime": "2019-01-09T19:17:04",
+      "value": 91,
+      "status": null,
+      "trend": "singleDown",
+      "trendRate": -2.1,
+      "realtimeValue": 92,
+      "smoothedValue": 91
+    },
+    {
+      "systemTime": "2019-01-10T03:12:04",
+      "displayTime": "2019-01-09T19:12:04",
+      "value": 103,
+      "status": null,
+      "trend": "fortyFiveDown",
+      "trendRate": -1.9,
+      "realtimeValue": 102,
+      "smoothedValue": 103
+    },
+    {
+      "systemTime": "2019-01-10T03:07:04",
+      "displayTime": "2019-01-09T19:07:04",
+      "value": 118,
+      "status": null,
+      "trend": "fortyFiveDown",
+      "trendRate": -1.3,
+      "realtimeValue": 116,
+      "smoothedValue": 118
+    },
+    {
+      "systemTime": "2019-01-10T03:02:04",
+      "displayTime": "2019-01-09T19:02:03",
+      "value": 133,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.1,
+      "realtimeValue": 135,
+      "smoothedValue": 133
+    },
+    {
+      "systemTime": "2019-01-10T02:57:05",
+      "displayTime": "2019-01-09T18:57:04",
+      "value": 146,
+      "status": null,
+      "trend": "fortyFiveUp",
+      "trendRate": 1.1,
+      "realtimeValue": 149,
+      "smoothedValue": 146
+    },
+    {
+      "systemTime": "2019-01-10T02:52:04",
+      "displayTime": "2019-01-09T18:52:03",
+      "value": 152,
+      "status": null,
+      "trend": "singleUp",
+      "trendRate": 2.1,
+      "realtimeValue": 155,
+      "smoothedValue": 152
+    },
+    {
+      "systemTime": "2019-01-10T02:47:04",
+      "displayTime": "2019-01-09T18:47:03",
+      "value": 147,
+      "status": null,
+      "trend": "singleUp",
+      "trendRate": 2.4,
+      "realtimeValue": 151,
+      "smoothedValue": 147
+    },
+    {
+      "systemTime": "2019-01-10T02:42:04",
+      "displayTime": "2019-01-09T18:42:04",
+      "value": 136,
+      "status": null,
+      "trend": "fortyFiveUp",
+      "trendRate": 1.9,
+      "realtimeValue": 136,
+      "smoothedValue": 136
+    },
+    {
+      "systemTime": "2019-01-10T02:37:04",
+      "displayTime": "2019-01-09T18:37:04",
+      "value": 118,
+      "status": null,
+      "trend": "fortyFiveUp",
+      "trendRate": 1,
+      "realtimeValue": 120,
+      "smoothedValue": 118
+    },
+    {
+      "systemTime": "2019-01-10T02:32:04",
+      "displayTime": "2019-01-09T18:32:03",
+      "value": 104,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.1,
+      "realtimeValue": 98,
+      "smoothedValue": 104
+    },
+    {
+      "systemTime": "2019-01-10T02:27:04",
+      "displayTime": "2019-01-09T18:27:04",
+      "value": 97,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.4,
+      "realtimeValue": 95,
+      "smoothedValue": 97
+    },
+    {
+      "systemTime": "2019-01-10T02:22:04",
+      "displayTime": "2019-01-09T18:22:03",
+      "value": 96,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.4,
+      "realtimeValue": 97,
+      "smoothedValue": 96
+    },
+    {
+      "systemTime": "2019-01-10T02:17:04",
+      "displayTime": "2019-01-09T18:17:04",
+      "value": 97,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.6,
+      "realtimeValue": 97,
+      "smoothedValue": 97
+    },
+    {
+      "systemTime": "2019-01-10T02:12:04",
+      "displayTime": "2019-01-09T18:12:03",
+      "value": 99,
+      "status": null,
+      "trend": "fortyFiveDown",
+      "trendRate": -1,
+      "realtimeValue": 96,
+      "smoothedValue": 99
+    },
+    {
+      "systemTime": "2019-01-10T02:07:05",
+      "displayTime": "2019-01-09T18:07:04",
+      "value": 101,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.8,
+      "realtimeValue": 103,
+      "smoothedValue": 101
+    },
+    {
+      "systemTime": "2019-01-10T02:02:04",
+      "displayTime": "2019-01-09T18:02:03",
+      "value": 106,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.9,
+      "realtimeValue": 105,
+      "smoothedValue": 106
+    },
+    {
+      "systemTime": "2019-01-10T01:57:04",
+      "displayTime": "2019-01-09T17:57:04",
+      "value": 111,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.7,
+      "realtimeValue": 111,
+      "smoothedValue": 111
+    },
+    {
+      "systemTime": "2019-01-10T01:52:04",
+      "displayTime": "2019-01-09T17:52:04",
+      "value": 116,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.4,
+      "realtimeValue": 118,
+      "smoothedValue": 116
+    },
+    {
+      "systemTime": "2019-01-10T01:47:05",
+      "displayTime": "2019-01-09T17:47:04",
+      "value": 120,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.5,
+      "realtimeValue": 120,
+      "smoothedValue": 120
+    },
+    {
+      "systemTime": "2019-01-10T01:42:04",
+      "displayTime": "2019-01-09T17:42:04",
+      "value": 121,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.6,
+      "realtimeValue": 122,
+      "smoothedValue": 121
+    },
+    {
+      "systemTime": "2019-01-10T01:37:05",
+      "displayTime": "2019-01-09T17:37:04",
+      "value": 122,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.9,
+      "realtimeValue": 120,
+      "smoothedValue": 122
+    },
+    {
+      "systemTime": "2019-01-10T01:32:04",
+      "displayTime": "2019-01-09T17:32:03",
+      "value": 124,
+      "status": null,
+      "trend": "fortyFiveDown",
+      "trendRate": -1,
+      "realtimeValue": 124,
+      "smoothedValue": 124
+    },
+    {
+      "systemTime": "2019-01-10T01:27:05",
+      "displayTime": "2019-01-09T17:27:04",
+      "value": 129,
+      "status": null,
+      "trend": "fortyFiveDown",
+      "trendRate": -1,
+      "realtimeValue": 129,
+      "smoothedValue": 129
+    },
+    {
+      "systemTime": "2019-01-10T01:22:05",
+      "displayTime": "2019-01-09T17:22:05",
+      "value": 135,
+      "status": null,
+      "trend": "fortyFiveDown",
+      "trendRate": -1,
+      "realtimeValue": 133,
+      "smoothedValue": 135
+    },
+    {
+      "systemTime": "2019-01-10T01:17:04",
+      "displayTime": "2019-01-09T17:17:04",
+      "value": 141,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.7,
+      "realtimeValue": 142,
+      "smoothedValue": 141
+    },
+    {
+      "systemTime": "2019-01-10T01:12:04",
+      "displayTime": "2019-01-09T17:12:04",
+      "value": 148,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.5,
+      "realtimeValue": 148,
+      "smoothedValue": 148
+    },
+    {
+      "systemTime": "2019-01-10T01:07:04",
+      "displayTime": "2019-01-09T17:07:04",
+      "value": 152,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.3,
+      "realtimeValue": 153,
+      "smoothedValue": 152
+    },
+    {
+      "systemTime": "2019-01-10T01:02:05",
+      "displayTime": "2019-01-09T17:02:04",
+      "value": 154,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.3,
+      "realtimeValue": 155,
+      "smoothedValue": 154
+    },
+    {
+      "systemTime": "2019-01-10T00:57:05",
+      "displayTime": "2019-01-09T16:57:05",
+      "value": 155,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.5,
+      "realtimeValue": 155,
+      "smoothedValue": 155
+    },
+    {
+      "systemTime": "2019-01-10T00:52:05",
+      "displayTime": "2019-01-09T16:52:04",
+      "value": 156,
+      "status": null,
+      "trend": "none",
+      "trendRate": -0.5,
+      "realtimeValue": 156,
+      "smoothedValue": 156
+    },
+    {
+      "systemTime": "2019-01-10T00:47:04",
+      "displayTime": "2019-01-09T16:47:03",
+      "value": 159,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.5,
+      "realtimeValue": 158,
+      "smoothedValue": 159
+    },
+    {
+      "systemTime": "2019-01-10T00:42:05",
+      "displayTime": "2019-01-09T16:42:05",
+      "value": 161,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.4,
+      "realtimeValue": 164,
+      "smoothedValue": 161
+    },
+    {
+      "systemTime": "2019-01-10T00:37:04",
+      "displayTime": "2019-01-09T16:37:04",
+      "value": 163,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.7,
+      "realtimeValue": 162,
+      "smoothedValue": 163
+    },
+    {
+      "systemTime": "2019-01-10T00:32:05",
+      "displayTime": "2019-01-09T16:32:05",
+      "value": 164,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.9,
+      "realtimeValue": 163,
+      "smoothedValue": 164
+    },
+    {
+      "systemTime": "2019-01-10T00:27:04",
+      "displayTime": "2019-01-09T16:27:04",
+      "value": 168,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.8,
+      "realtimeValue": 167,
+      "smoothedValue": 168
+    },
+    {
+      "systemTime": "2019-01-10T00:22:05",
+      "displayTime": "2019-01-09T16:22:04",
+      "value": 175,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.4,
+      "realtimeValue": 175,
+      "smoothedValue": 175
+    },
+    {
+      "systemTime": "2019-01-10T00:17:05",
+      "displayTime": "2019-01-09T16:17:04",
+      "value": 180,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.1,
+      "realtimeValue": 182,
+      "smoothedValue": 180
+    },
+    {
+      "systemTime": "2019-01-10T00:12:05",
+      "displayTime": "2019-01-09T16:12:04",
+      "value": 182,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.2,
+      "realtimeValue": 182,
+      "smoothedValue": 182
+    },
+    {
+      "systemTime": "2019-01-10T00:07:04",
+      "displayTime": "2019-01-09T16:07:03",
+      "value": 184,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0,
+      "realtimeValue": 183,
+      "smoothedValue": 184
+    },
+    {
+      "systemTime": "2019-01-10T00:02:04",
+      "displayTime": "2019-01-09T16:02:04",
+      "value": 187,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.5,
+      "realtimeValue": 188,
+      "smoothedValue": 187
     }
   ]
 }
