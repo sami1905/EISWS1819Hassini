@@ -26,8 +26,8 @@ app.use(function(req, res, next){
 });
 
 
-//POST /dexcomValues
-app.post('/dexcomValues', bodyParser.json(), function(req, res){
+//POST /authorization
+app.post('/authorization', bodyParser.json(), function(req, res){
     
         //var start = req.body.start;
         //var end = req.body.end;
@@ -66,6 +66,7 @@ app.post('/dexcomValues', bodyParser.json(), function(req, res){
                 
             });
         });
+    
         
         
         
@@ -76,14 +77,15 @@ app.post('/dexcomValues', bodyParser.json(), function(req, res){
             grant_type: 'refresh_token',
             redirect_uri: 'https://wba2.herokuapp.com' }));
         req.end();
-        
-    });
-    
-    console.log("test");
-    //get dexcom_data
+        });
+});
+
+//POST /dexcomValues
+app.post('/dexcomValues/:date', bodyParser.json(), function(req, res){
     fs.readFile(settings.user_Authorization, function(err, data){
         var userAuthorization = JSON.parse(data);
-        
+        var date = req.params.date;
+        console.log(date);
         fs.readFile(settings.dexcom_data, function(err, data){
            
 
@@ -91,7 +93,7 @@ app.post('/dexcomValues', bodyParser.json(), function(req, res){
                 "method": "GET",
                 "hostname": "api.dexcom.com",
                 "port": null,
-                "path": "/v2/users/self/egvs?startDate=2018-12-16T15:30:00&endDate=2018-12-16T15:45:00",
+                "path": "/v2/users/self/egvs?startDate=2019-01-11T00:00:00&endDate=" + date,
                 "headers": {
                     "authorization": "Bearer " + userAuthorization.access_token,
                     }
@@ -117,11 +119,12 @@ app.post('/dexcomValues', bodyParser.json(), function(req, res){
     });
 });
 
+
 //GET /dexcomValues
 app.get('/dexcomValues', function(req, res){
     fs.readFile(settings.dexcom_data,function(err,data){
         var dexcomValues = JSON.parse(data);
-        res.status(200).send(dexcomValues);
+        res.status(200).send(dexcomValues.egvs);
     });
 });
 

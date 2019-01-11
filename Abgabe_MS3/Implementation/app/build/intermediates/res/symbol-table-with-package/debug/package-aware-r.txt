@@ -1214,6 +1214,7 @@ id textSpacerNoTitle
 id textStart
 id text_input_password_toggle
 id text_view_result
+id text_view_resultHome
 id text_view_result_addEvent
 id textinput_counter
 id textinput_error

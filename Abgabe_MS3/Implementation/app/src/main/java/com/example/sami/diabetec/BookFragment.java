@@ -30,7 +30,8 @@ public class BookFragment extends Fragment {
 
         textViewResult = view.findViewById(R.id.text_view_result);
 
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://192.168.0.10:3000/").addConverterFactory(GsonConverterFactory.create()).build();
+        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://192.168.0.10:3000/").
+                addConverterFactory(GsonConverterFactory.create()).build();
 
         jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi.class);
 

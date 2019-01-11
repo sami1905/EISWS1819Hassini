@@ -30,6 +30,7 @@ public class addEventActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_event);
 
         quitButton = findViewById(R.id.button_quit);
+        //bei Click, MainActivity öffnen
         quitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -37,9 +38,6 @@ public class addEventActivity extends AppCompatActivity {
             }
         });
 
-        Gson gson = new GsonBuilder()
-                .setLenient()
-                .create();
 
         textViewResult = findViewById(R.id.text_view_result_addEvent);
 
@@ -59,21 +57,23 @@ public class addEventActivity extends AppCompatActivity {
         Event event = new Event("newDate", 0, 0,
                 0, 0, 0, 0, 0);
 
-        Call<Event> call = jsonPlaceHolderApi.createPost(event);
+        //POST auf /events
+        Call<Event> call = jsonPlaceHolderApi.createEvent(event);
         call.enqueue(new Callback<Event>() {
             @Override
             public void onResponse(Call<Event> call, Response<Event> response) {
 
-
+                //Fehlermeldung ausgeben
                 if(!response.isSuccessful()){
                     textViewResult.setText("Code: " + response.code());
                     return;
                 }
 
+                //Response ausgeben
                 Event eventResponse = response.body();
 
                 String content = "";
-                //content += "Code: " + response.code() + "\n";
+                content += "Code: " + response.code() + "\n";
                 content += "ID: " + eventResponse.getId() + "\n";
                 content += "Date: " + eventResponse.getDate() + "\n";
                 content += "Blutzuckerwert: " + eventResponse.getValue() + "\n";

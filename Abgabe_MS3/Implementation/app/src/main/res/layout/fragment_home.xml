@@ -37,6 +37,27 @@
         android:textSize="10dp" />
 
 
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="74dp"
+        android:layout_marginTop="171dp">
+
+
+        <TextView
+            android:id="@+id/text_view_resultHome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+
+
+            />
+
+    </android.support.v4.widget.NestedScrollView>
 
     <View
         android:id="@+id/button_View"
