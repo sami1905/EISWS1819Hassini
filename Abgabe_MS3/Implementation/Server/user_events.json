@@ -1,13 +1,68 @@
 [
   {
     "id": 1,
-    "date": "newDate",
-    "value": 0,
-    "carbohydrates": 0,
-    "be": 0,
-    "correction": 0,
-    "meal_id": 0,
-    "insulin_units": 0,
-    "insulin_type": 0
+    "date": "rest",
+    "value": "req.body.value",
+    "carbohydrates": "req.body.carbohydrates",
+    "be": "req.body.be",
+    "correction": "req.body.correction",
+    "meal_id": "req.body.meal_id",
+    "insulin_units": "req.body.insulin_units",
+    "insulin_type": "req.body.insulin_type"
+  },
+  {
+    "id": 2,
+    "date": "rest",
+    "value": "req.body.value",
+    "carbohydrates": "req.body.carbohydrates",
+    "be": "req.body.be",
+    "correction": "req.body.correction",
+    "meal_id": "req.body.meal_id",
+    "insulin_units": "req.body.insulin_units",
+    "insulin_type": "req.body.insulin_type"
+  },
+  {
+    "id": 3,
+    "date": "rest",
+    "value": "req.body.value",
+    "carbohydrates": "req.body.carbohydrates",
+    "be": "req.body.be",
+    "correction": "req.body.correction",
+    "meal_id": "req.body.meal_id",
+    "insulin_units": "req.body.insulin_units",
+    "insulin_type": "req.body.insulin_type"
+  },
+  {
+    "id": 4,
+    "date": "2019-01-11T16:22:00",
+    "value": "req.body.value",
+    "carbohydrates": "req.body.carbohydrates",
+    "be": "req.body.be",
+    "correction": "req.body.correction",
+    "meal_id": "req.body.meal_id",
+    "insulin_units": "req.body.insulin_units",
+    "insulin_type": "req.body.insulin_type"
+  },
+  {
+    "id": 5,
+    "date": "2019-01-11T16:22:00",
+    "value": "req.body.value",
+    "carbohydrates": "req.body.carbohydrates",
+    "be": "req.body.be",
+    "correction": "req.body.correction",
+    "meal_id": "req.body.meal_id",
+    "insulin_units": "req.body.insulin_units",
+    "insulin_type": "req.body.insulin_type"
+  },
+  {
+    "id": 6,
+    "date": "2019-01-11T16:22:00",
+    "value": "req.body.value",
+    "carbohydrates": "req.body.carbohydrates",
+    "be": "req.body.be",
+    "correction": "req.body.correction",
+    "meal_id": "req.body.meal_id",
+    "insulin_units": "req.body.insulin_units",
+    "insulin_type": "req.body.insulin_type"
   }
 ]
