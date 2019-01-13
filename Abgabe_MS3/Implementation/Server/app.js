@@ -29,7 +29,6 @@ app.use(function(req, res, next){
 });
 
 //POST /userValues
-
 app.post('/userValues', bodyParser.json(),function(req, res){
     fs.readFile(settings.user_values, function(err, data){
         var userValues = JSON.parse(data);
@@ -46,7 +45,7 @@ app.post('/userValues', bodyParser.json(),function(req, res){
         
         for( var i = 0; i < numberOfValues; i++){
             if(userValues[i].type == "dexcom"){
-                lastDate = userValues[i].date;
+                lastDate = userValues[i].date + "T" + userValues[i].time;
             }
         }
         
@@ -64,7 +63,8 @@ app.post('/userValues', bodyParser.json(),function(req, res){
                         userValues.push({
                             "id" : ++userValuesIndex,
                             "type" : "dexcom",
-                            "date" : dexcomData.egvs[x].displayTime,
+                            "date" : dexcomData.egvs[x].displayTime.substr(0, 10),
+                            "time": dexcomData.egvs[x].displayTime.substring(11,19),
                             "value" : dexcomData.egvs[x].value
                         }); 
                     }
@@ -86,6 +86,28 @@ app.get('/userValues', bodyParser.json(), function(req, res){
 });
 
 //GET /userValues/:date
+app.get('/userValues/:date', bodyParser.json(), function(req, res){
+    fs.readFile(settings.user_values, function(err, data){
+    var userValues = JSON.parse(data);
+    var date = req.params.date;
+    var userValuesOfDate = [];
+    
+    for(var i = 0; i< userValues.length; i++){
+        if(userValues[i].date == date){
+            userValuesOfDate.push({
+                "id": userValues[i].id,
+                "type": userValues[i].type,
+                "date": userValues[i].date,
+                "time": userValues[i].time,
+                "value": userValues[i].value
+            })
+        }
+    }
+    
+    res.status(200).send(userValuesOfDate);
+    
+   }); 
+});
 
 //POST /authorization
 app.post('/authorization', bodyParser.json(), function(req, res){
@@ -211,6 +233,8 @@ app.post('/events', bodyParser.json(), function(req, res){
             var events = JSON.parse(data);
             var numberOfEvents = events.length;
             var max_index = 0;
+            var date = req.body.date.substring(0,10);
+            var time = req.body.date.substring(11,19);
         
             //id of the last event is inserted into max_index
             for(var i = 0; i< numberOfEvents; i++){
@@ -218,11 +242,14 @@ app.post('/events', bodyParser.json(), function(req, res){
                     max_index = events[i].id;
                 }
             }
+            
+            
         
             //creat event
             events.push({
                 "id" : ++max_index,
-                "date" : req.body.date,
+                "date" : date,
+                "time" : time,
                 "value" : req.body.value,
                 "carbohydrates" : req.body.carbohydrates,
                 "be" : req.body.be,
@@ -235,7 +262,8 @@ app.post('/events', bodyParser.json(), function(req, res){
             values.push({
                 "id" : ++userValuesIndex,
                 "type" : "manuell",
-                "date" : req.body.date,
+                "date" : date,
+                "time" : time,
                 "value" : req.body.value
             });
             
@@ -253,6 +281,35 @@ app.get('/events', function(req, res){
         var user_events = JSON.parse(data);
         res.status(200).send(user_events);
     });
+});
+
+//GET /events/:date
+app.get('/events/:date', bodyParser.json(), function(req, res){
+    fs.readFile(settings.user_events, function(err, data){
+    var userEvents = JSON.parse(data);
+    var date = req.params.date;
+    var userEventsOfDate = [];
+    
+    for(var i = 0; i< userEvents.length; i++){
+        if(userEvents[i].date == date){
+            userEventsOfDate.push({
+                "id": userEvents[i].id,
+                "date": userEvents[i].date,
+                "time": userEvents[i].time,
+                "value": userEvents[i].value,
+                "carbohydrates": userEvents[i].carbohydrates,
+                "be": userEvents[i].be,
+                "correction": userEvents[i].correction,
+                "meal_id": userEvents[i].meal_id,
+                "insulin_units": userEvents[i].insulin_units,
+                "insulin_type": userEvents[i].insulin_type
+            })
+        }
+    }
+    
+    res.status(200).send(userEventsOfDate);
+    
+   }); 
 });
 
 app.listen(settings.port, function(){

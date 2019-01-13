@@ -1,68 +1,38 @@
 [
   {
     "id": 1,
-    "date": "rest",
-    "value": "req.body.value",
-    "carbohydrates": "req.body.carbohydrates",
-    "be": "req.body.be",
-    "correction": "req.body.correction",
-    "meal_id": "req.body.meal_id",
-    "insulin_units": "req.body.insulin_units",
-    "insulin_type": "req.body.insulin_type"
+    "date": "2019-01-11",
+    "time": "16:23:55",
+    "value": 219,
+    "carbohydrates": "60",
+    "be": "5",
+    "correction": "3",
+    "meal_id": "7",
+    "insulin_units": "13",
+    "insulin_type": "0"
   },
   {
     "id": 2,
-    "date": "rest",
-    "value": "req.body.value",
-    "carbohydrates": "req.body.carbohydrates",
-    "be": "req.body.be",
-    "correction": "req.body.correction",
-    "meal_id": "req.body.meal_id",
-    "insulin_units": "req.body.insulin_units",
-    "insulin_type": "req.body.insulin_type"
+    "date": "2019-01-11",
+    "time": "16:23:55",
+    "value": 219,
+    "carbohydrates": "60",
+    "be": "5",
+    "correction": "3",
+    "meal_id": "7",
+    "insulin_units": "13",
+    "insulin_type": "0"
   },
   {
     "id": 3,
-    "date": "rest",
-    "value": "req.body.value",
-    "carbohydrates": "req.body.carbohydrates",
-    "be": "req.body.be",
-    "correction": "req.body.correction",
-    "meal_id": "req.body.meal_id",
-    "insulin_units": "req.body.insulin_units",
-    "insulin_type": "req.body.insulin_type"
-  },
-  {
-    "id": 4,
-    "date": "2019-01-11T16:22:00",
-    "value": "req.body.value",
-    "carbohydrates": "req.body.carbohydrates",
-    "be": "req.body.be",
-    "correction": "req.body.correction",
-    "meal_id": "req.body.meal_id",
-    "insulin_units": "req.body.insulin_units",
-    "insulin_type": "req.body.insulin_type"
-  },
-  {
-    "id": 5,
-    "date": "2019-01-11T16:22:00",
-    "value": "req.body.value",
-    "carbohydrates": "req.body.carbohydrates",
-    "be": "req.body.be",
-    "correction": "req.body.correction",
-    "meal_id": "req.body.meal_id",
-    "insulin_units": "req.body.insulin_units",
-    "insulin_type": "req.body.insulin_type"
-  },
-  {
-    "id": 6,
-    "date": "2019-01-11T16:22:00",
-    "value": "req.body.value",
-    "carbohydrates": "req.body.carbohydrates",
-    "be": "req.body.be",
-    "correction": "req.body.correction",
-    "meal_id": "req.body.meal_id",
-    "insulin_units": "req.body.insulin_units",
-    "insulin_type": "req.body.insulin_type"
+    "date": "2019-01-13",
+    "time": "16:23:55",
+    "value": 219,
+    "carbohydrates": "60",
+    "be": "5",
+    "correction": "3",
+    "meal_id": "7",
+    "insulin_units": "13",
+    "insulin_type": "0"
   }
 ]
