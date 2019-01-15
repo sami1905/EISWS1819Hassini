@@ -6,10 +6,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -22,14 +26,14 @@ public class addEventActivity extends AppCompatActivity {
     private Button quitButton;
 
     JsonPlaceHolderApi jsonPlaceHolderApi;
-    private TextView textViewResult;
+    private EditText editText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_event);
 
-        quitButton = findViewById(R.id.button_quit);
+
         //bei Click, MainActivity öffnen
         quitButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,13 +43,16 @@ public class addEventActivity extends AppCompatActivity {
         });
 
 
-        textViewResult = findViewById(R.id.text_view_result_addEvent);
+        editText = findViewById(R.id.edit_Date);
 
         Retrofit retrofit = new Retrofit.Builder().baseUrl("http://192.168.0.10:3000/")
                 .addConverterFactory(GsonConverterFactory.create()).build();
         jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi.class);
 
-        createEvent();
+        SimpleDateFormat sdf = new SimpleDateFormat( "yyyy-MM-dd" );
+        editText.setText( sdf.format( new Date() ));
+
+       // createEvent();
     }
 
     public void openMainActivity(){
@@ -54,7 +61,7 @@ public class addEventActivity extends AppCompatActivity {
     }
 
     private void createEvent(){
-        Event event = new Event("newDate", 0, 0,
+        Event event = new Event("newDate", "newTime", 0, 0,
                 0, 0, 0, 0, 0);
 
         //POST auf /events
@@ -65,7 +72,7 @@ public class addEventActivity extends AppCompatActivity {
 
                 //Fehlermeldung ausgeben
                 if(!response.isSuccessful()){
-                    textViewResult.setText("Code: " + response.code());
+                    //textViewResult.setText("Code: " + response.code());
                     return;
                 }
 
@@ -84,12 +91,12 @@ public class addEventActivity extends AppCompatActivity {
                 content += "Insulineinheiten: " + eventResponse.getInsulin_units() + "\n";
                 content += "Insulinart: " + eventResponse.getInsulin_type() + "\n\n";
 
-                textViewResult.setText(content);
+               // textViewResult.setText(content);
             }
 
             @Override
             public void onFailure(Call<Event> call, Throwable t) {
-                textViewResult.setText(t.getMessage());
+                //textViewResult.setText(t.getMessage());
 
             }
         });

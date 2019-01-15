@@ -1002,12 +1002,15 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable ic_add
 drawable ic_book
+drawable ic_close
 drawable ic_home_
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_report
+drawable ic_save
 drawable ic_settings
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
@@ -1064,10 +1067,8 @@ id bottom
 id bottom_navigation
 id buttonPanel
 id button_View
-id button_View_addEvent
 id button_addEvent
 id button_dexcom
-id button_quit
 id center
 id center_horizontal
 id center_vertical
@@ -1093,6 +1094,7 @@ id design_navigation_view
 id dimensions
 id direct
 id disableHome
+id edit_Date
 id edit_query
 id end
 id enterAlways
@@ -1215,7 +1217,6 @@ id textSpacerNoTitle
 id textStart
 id text_input_password_toggle
 id text_view_result
-id text_view_result_addEvent
 id textinput_counter
 id textinput_error
 id textinput_helper_text

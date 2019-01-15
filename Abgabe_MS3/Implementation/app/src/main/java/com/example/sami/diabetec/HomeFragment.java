@@ -2,11 +2,10 @@ package com.example.sami.diabetec;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,8 +25,6 @@ import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -46,7 +43,7 @@ public class HomeFragment extends Fragment {
     private LineChart mChart;
 
     private Button dexcomButton;
-    private Button addEventButton;
+    private FloatingActionButton addEventButton;
     private TextView lastValue;
     private JsonPlaceHolderApi jsonPlaceHolderApi;
     //Values hinzufügen
@@ -145,7 +142,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        //AddEventActivity bei clicken auf Button öffnen
+        //addEventActivity bei clicken auf Button öffnen
         addEventButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

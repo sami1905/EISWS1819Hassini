@@ -6,6 +6,8 @@ public class Event {
 
     private String date;
 
+    private String time;
+
     private int value;
 
     private int carbohydrates;
@@ -20,8 +22,9 @@ public class Event {
 
     private int insulin_type;
 
-    public Event(String date, int value, int carbohydrates, int be, int correction, int meal_id, int insulin_units, int insulin_type) {
+    public Event(String date, String time, int value, int carbohydrates, int be, int correction, int meal_id, int insulin_units, int insulin_type) {
         this.date = date;
+        this.time = time;
         this.value = value;
         this.carbohydrates = carbohydrates;
         this.be = be;
@@ -37,6 +40,10 @@ public class Event {
 
     public String getDate() {
         return date;
+    }
+
+    public String getTime() {
+        return time;
     }
 
     public int getValue() {

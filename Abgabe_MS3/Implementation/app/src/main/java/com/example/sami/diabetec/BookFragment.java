@@ -60,13 +60,36 @@ public class BookFragment extends Fragment {
                     String content = "";
                     //content += "ID: " + event.getId() + "\n";
                     content += "Date: " + event.getDate() + "\n";
-                    content += "Blutzuckerwert: " + event.getValue() + "\n";
-                    content += "Kohlenhydrate: " + event.getCarbohydrates() + "\n";
-                    content += "BEs: " + event.getBe() + "\n";
-                    content += "Korrektureinheiten: " + event.getCorrection() + "\n";
-                    content += "Mahlzeit ID: " + event.getMeal_id() + "\n";
-                    content += "Insulineinheiten: " + event.getInsulin_units() + "\n";
-                    content += "Insulinart: " + event.getInsulin_type() + "\n\n";
+                    content += "Time: " + event.getTime() + "\n";
+                    if(event.getValue() != 0){
+                        content += "Blutzuckerwert: " + event.getValue() + "\n";
+                    }
+
+                    if(event.getCarbohydrates() != 0){
+                        content += "Kohlenhydrate: " + event.getCarbohydrates() + "\n";
+                    }
+
+                    if(event.getBe() != 0){
+                        content += "BEs: " + event.getBe() + "\n";
+                    }
+
+                    if(event.getCorrection() != 0){
+                        content += "Korrektureinheiten: " + event.getCorrection() + "\n";
+                    }
+
+                    if(event.getMeal_id() != 0){
+                        content += "Mahlzeit: " + event.getMeal_id() + "\n";
+                    }
+
+                    if(event.getInsulin_units() != 0){
+                        content += "Insulineinheiten: " + event.getInsulin_units() + "\n";
+                    }
+
+                    if(event.getInsulin_type() != 0) {
+                        content += "Insulinart: " + event.getInsulin_type() + "\n";
+                    }
+
+                    content += "_________________________________________\n\n";
 
                     textViewResult.append(content);
                 }

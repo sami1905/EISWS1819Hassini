@@ -28,86 +28,7 @@ app.use(function(req, res, next){
   next();
 });
 
-//POST /userValues
-app.post('/userValues', bodyParser.json(),function(req, res){
-    fs.readFile(settings.user_values, function(err, data){
-        var userValues = JSON.parse(data);
-        var numberOfValues = userValues.length;
-        var lastDate;
-        var userValuesIndex = 0;
-        
-        //id of the last value is inserted into userValuesIndex
-        for(var i = 0; i< numberOfValues; i++){
-            if(userValues[i].id > userValuesIndex){
-                userValuesIndex = userValues[i].id;
-            }
-        }
-        
-        for( var i = 0; i < numberOfValues; i++){
-            if(userValues[i].type == "dexcom"){
-                lastDate = userValues[i].date + "T" + userValues[i].time;
-            }
-        }
-        
-        if(lastDate == null)lastDate = "2018-12-15T16:03:06";
-        
-        console.log(lastDate);
-        
-        fs.readFile(settings.dexcom_data, function(err, data){
-            var dexcomData = JSON.parse(data);
-            var numbersOfDexcomData = dexcomData.egvs.length;
-        
-            for(var i = 0; i < numbersOfDexcomData; i++){
-                if(dexcomData.egvs[i].displayTime == lastDate){
-                    for(var x = (i-1); x >= 0; x--){
-                        userValues.push({
-                            "id" : ++userValuesIndex,
-                            "type" : "dexcom",
-                            "date" : dexcomData.egvs[x].displayTime.substr(0, 10),
-                            "time": dexcomData.egvs[x].displayTime.substring(11,19),
-                            "value" : dexcomData.egvs[x].value
-                        }); 
-                    }
-                }
-            
-               
-            }
-            fs.writeFile(settings.user_values, JSON.stringify(userValues, null, 2));
-        });     
-    });
-});
-
-//GET /userValues
-app.get('/userValues', bodyParser.json(), function(req, res){
-    fs.readFile(settings.user_values, function(err, data){
-        var userValues = JSON.parse(data);
-        res.status(200).send(userValues);
-  });
-});
-
-//GET /userValues/:date
-app.get('/userValues/:date', bodyParser.json(), function(req, res){
-    fs.readFile(settings.user_values, function(err, data){
-    var userValues = JSON.parse(data);
-    var date = req.params.date;
-    var userValuesOfDate = [];
-    
-    for(var i = 0; i< userValues.length; i++){
-        if(userValues[i].date == date){
-            userValuesOfDate.push({
-                "id": userValues[i].id,
-                "type": userValues[i].type,
-                "date": userValues[i].date,
-                "time": userValues[i].time,
-                "value": userValues[i].value
-            })
-        }
-    }
-    
-    res.status(200).send(userValuesOfDate);
-    
-   }); 
-});
+//DEXCOM-API
 
 //POST /authorization
 app.post('/authorization', bodyParser.json(), function(req, res){
@@ -215,6 +136,93 @@ app.get('/dexcomValues', function(req, res){
     });
 });
 
+
+//UserValues
+
+//POST /userValues
+app.post('/userValues', bodyParser.json(),function(req, res){
+    fs.readFile(settings.user_values, function(err, data){
+        var userValues = JSON.parse(data);
+        var numberOfValues = userValues.length;
+        var lastDate;
+        var userValuesIndex = 0;
+        
+        //id of the last value is inserted into userValuesIndex
+        for(var i = 0; i< numberOfValues; i++){
+            if(userValues[i].id > userValuesIndex){
+                userValuesIndex = userValues[i].id;
+            }
+        }
+        
+        for( var i = 0; i < numberOfValues; i++){
+            if(userValues[i].type == "dexcom"){
+                lastDate = userValues[i].date + "T" + userValues[i].time;
+            }
+        }
+        
+        if(lastDate == null)lastDate = "2018-12-15T16:03:06";
+        
+        console.log(lastDate);
+        
+        fs.readFile(settings.dexcom_data, function(err, data){
+            var dexcomData = JSON.parse(data);
+            var numbersOfDexcomData = dexcomData.egvs.length;
+        
+            for(var i = 0; i < numbersOfDexcomData; i++){
+                if(dexcomData.egvs[i].displayTime == lastDate){
+                    for(var x = (i-1); x >= 0; x--){
+                        userValues.push({
+                            "id" : ++userValuesIndex,
+                            "type" : "dexcom",
+                            "date" : dexcomData.egvs[x].displayTime.substr(0, 10),
+                            "time": dexcomData.egvs[x].displayTime.substring(11,19),
+                            "value" : dexcomData.egvs[x].value
+                        }); 
+                    }
+                }
+            
+               
+            }
+            fs.writeFile(settings.user_values, JSON.stringify(userValues, null, 2));
+        });     
+    });
+});
+
+//GET /userValues
+app.get('/userValues', bodyParser.json(), function(req, res){
+    fs.readFile(settings.user_values, function(err, data){
+        var userValues = JSON.parse(data);
+        res.status(200).send(userValues);
+  });
+});
+
+//GET /userValues/:date
+app.get('/userValues/:date', bodyParser.json(), function(req, res){
+    fs.readFile(settings.user_values, function(err, data){
+    var userValues = JSON.parse(data);
+    var date = req.params.date;
+    var userValuesOfDate = [];
+    
+    for(var i = 0; i< userValues.length; i++){
+        if(userValues[i].date == date){
+            userValuesOfDate.push({
+                "id": userValues[i].id,
+                "type": userValues[i].type,
+                "date": userValues[i].date,
+                "time": userValues[i].time,
+                "value": userValues[i].value
+            })
+        }
+    }
+    
+    res.status(200).send(userValuesOfDate);
+    
+   }); 
+});
+
+
+//Events
+
 //POST /events
 app.post('/events', bodyParser.json(), function(req, res){
     fs.readFile(settings.user_values, function(err, data){
@@ -243,10 +251,7 @@ app.post('/events', bodyParser.json(), function(req, res){
                 }
             }
             
-            
-        
-            //creat event
-            events.push({
+            var eventToAdd = {
                 "id" : ++max_index,
                 "date" : date,
                 "time" : time,
@@ -257,19 +262,42 @@ app.post('/events', bodyParser.json(), function(req, res){
                 "meal_id" : req.body.meal_id,
                 "insulin_units" : req.body.insulin_units,
                 "insulin_type" : req.body.insulin_type
-            });
+            };
             
-            values.push({
+            var insertIndexOfEvents = 0;
+            
+            for(insertIndexOfEvents; insertIndexOfEvents < values.length; insertIndexOfEvents++)
+            if(values[insertIndexOfEvents].date == date){
+                break;
+            }
+        
+            //creat event
+            events.splice(insertIndexOfEvents, 0, eventToAdd);
+            
+            //add value of event to user_values
+            var valueToAdd = {
                 "id" : ++userValuesIndex,
                 "type" : "manuell",
                 "date" : date,
                 "time" : time,
                 "value" : req.body.value
-            });
+            };
+            
+            //search for the index by date of the value to add
+            var insertIndexOfValues = 0;
+            
+            for(insertIndexOfValues; insertIndexOfValues < values.length; insertIndexOfValues++)
+            if(values[insertIndexOfValues].date == date){
+                break;
+            }
+            
+            values.splice(insertIndexOfValues, 0, valueToAdd);
             
             fs.writeFile(settings.user_events, JSON.stringify(events, null, 2));
             fs.writeFile(settings.user_values, JSON.stringify(values, null, 2));
-            res.status(201).send(events[(max_index-1)]);
+            
+            res.status(201).send(events[(insertIndexOfEvents)]);
+            
         
         });
     });
@@ -310,6 +338,171 @@ app.get('/events/:date', bodyParser.json(), function(req, res){
     res.status(200).send(userEventsOfDate);
     
    }); 
+});
+
+
+//Statics
+
+//GET /valuesInPercent/:date
+app.get('/valuesInPercent/:date', bodyParser.json(), function(req, res){
+   fs.readFile(settings.user_values, function(err,data){
+       var userValues = JSON.parse(data);
+       var date = req.params.date;
+       var userValuesSinceDate = [];
+       var nValues = 0;
+       var nVeryLow = 0;
+       var nLow = 0;
+       var nWithinRange = 0;
+       var nHigh = 0;
+       var percentVeryLow = 0;
+       var percentLow = 0;
+       var percentWithinRange = 0;
+       var percentHigh = 0;
+       
+       //alle Werte ab 'date' mit berücksichtigen
+       if(date != "0"){
+           for(var i = 0; i < userValues.length; i++){
+               if (userValues[i].date == date){
+                   for(i; i<userValues.length; i++){
+                       nValues++;
+                       if(userValues[i].value <= 55){
+                           nVeryLow++;
+                       }
+                       if(userValues[i].value > 55 && userValues[i].value <= 80){
+                           nLow++;
+                       }
+                       if(userValues[i].value >=180){
+                           nHigh++;
+                       }
+                       else nWithinRange++;
+                   }
+               }
+           }
+       }
+       //alle Werte mit berücksichtigen
+       else {
+           for (var i = 0; i < userValues.length; i++){
+               nValues++;
+               if(userValues[i].value <= 55){
+                   nVeryLow++;
+               }
+               if(userValues[i].value > 55 && userValues[i].value <= 80){
+                   nLow++;
+               }
+               if(userValues[i].value >=180){
+                   nHigh++;
+               }   
+               else nWithinRange++;
+           }
+       }
+       percentVeryLow = (nVeryLow/nValues);
+       percentLow = (nLow/nValues);
+       percentWithinRange = (nWithinRange/nValues);
+       percentHigh = (nHigh/nValues);
+       
+       userValuesSinceDate.push({
+           "nValues" : nValues,
+           "nVeryLow" : nVeryLow,
+           "nLow" : nLow,
+           "nWithinRange" : nWithinRange,
+           "nHigh" : nHigh,
+           "percentVeryLow" : percentVeryLow,
+           "percentLow" : percentLow,
+           "percentWithinRange" : percentWithinRange,
+           "percentHigh" : percentHigh
+       });
+   res.status(200).send(userValuesSinceDate);
+   });   
+});
+
+//GET/averageValue/:date
+app.get('/averageValue/:date', bodyParser.json(), function(req, res){
+    fs.readFile(settings.user_values, function(err,data){
+        var userValues = JSON.parse(data);
+        var date = req.params.date;
+        var minValue = -1;
+        var maxValue = -1;
+        var averageValue = 0;
+        var nValues = 0;
+        var HbA1c = 0;
+        var statics = [];
+        
+        //alle Werte ab 'date' mit berücksichtigen
+        if (date != "0"){
+            for (var i = 0; i < userValues.length; i++){
+                 if(userValues[i].date == date){
+                     for( i; i < userValues.length; i++){
+                         nValues++;
+                         if (minValue == -1)minValue = userValues[i].value;
+                         
+                         if(minValue > userValues[i].value)minValue = userValues[i].value;
+                         
+                         if(maxValue == -1)maxValue = userValues[i].value;
+                         
+                         if(maxValue < userValues[i].value)maxValue = userValues[i].value;
+                         
+                         averageValue += userValues[i].value
+                     }
+                     
+                 }
+            }
+        }
+        
+        //alle Werte mit berücksichtigen
+        else{
+            for( var i = 0; i < userValues.length; i++){
+                nValues++;
+                if (minValue == -1)minValue = userValues[i].value;
+                if(minValue > userValues[i].value)minValue = userValues[i].value;
+                if(maxValue == -1)maxValue = userValues[i].value;
+                if(maxValue < userValues[i].value)maxValue = userValues[i].value;
+                averageValue += userValues[i].value
+                }
+            }
+        
+        averageValue = (averageValue/nValues);
+        
+        HbA1c = ((0.031 * averageValue) + 2.393);
+        
+        statics.push({
+           "nValues" : nValues,
+           "minValue" : minValue,
+           "maxValue" : maxValue,
+           "averageValue" : averageValue,
+            "HbA1c" : HbA1c
+        });
+        res.status(200).send(statics);   
+    });
+});
+
+//GET /valuesOutOfRange
+app.get('/valuesOutOfRange', bodyParser.json(), function(req, res) {
+    fs.readFile(settings.user_values, function(err,data){
+        var userValues = JSON.parse(data);
+        var valuesOutOfRange = {
+            "low" : [],
+            "high": []
+        };
+        
+        for(var i = 0; i< userValues.length; i++){
+            if(userValues[i].value <= 70){
+                valuesOutOfRange.low.push({
+                    "date": userValues[i].date,
+                    "time": userValues[i].time,
+                    "value": userValues[i].value
+                });
+            }
+            if(userValues[i].value >= 180){
+                valuesOutOfRange.high.push({
+                    "date": userValues[i].date,
+                    "time": userValues[i].time,
+                    "value": userValues[i].value
+                });
+            }   
+        }   
+        res.status(200).send(valuesOutOfRange);   
+
+    });
 });
 
 app.listen(settings.port, function(){
