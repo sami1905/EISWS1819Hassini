@@ -5,7 +5,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,8 +32,6 @@ import java.util.concurrent.TimeUnit;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class HomeFragment extends Fragment {
 
@@ -43,50 +40,33 @@ public class HomeFragment extends Fragment {
     private LineChart mChart;
 
     private Button dexcomButton;
-    private FloatingActionButton addEventButton;
-    private TextView lastValue;
+    private TextView textView;
     private JsonPlaceHolderApi jsonPlaceHolderApi;
-    //Values hinzufügen
+
+    //Value hinzufügen
     ArrayList<Entry> yValues = new ArrayList<>();
-
+    ArrayList<Entry> yValues2 = new ArrayList<>();
     int[] dv = new int[288];
-
-
-
-
-
-    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
-    String date = sdf.format(new Date());
-
-
+    ArrayList<ILineDataSet> dataSets = new ArrayList<>();
+    ArrayList<ILineDataSet> todayDataSets = new ArrayList<>();
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        dexcomButton = view.findViewById(R.id.button_dexcom);
-        addEventButton = view.findViewById(R.id.button_addEvent);
-        lastValue = view.findViewById(R.id.last_value);
         mChart = view.findViewById(R.id.lineChart);
-
-
-
-        for (int i = 0; i < dv.length; ++i)
-        {
-            dv[i] = 500;
-        }
-
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://192.168.0.10:3000/").
-                addConverterFactory(GsonConverterFactory.create()).build();
-
-        jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi.class);
-
 
         //Chart anlegen
         mChart.setDragEnabled(true);
         mChart.setScaleEnabled(true);
         mChart.setGridBackgroundColor(Color.rgb(127,255,0));
+
+        //show first mChart
+        for (int i = 0; i < dv.length; ++i)
+        {
+            dv[i] = 500;
+        }
 
 
         //LimitLine anlegen
@@ -115,14 +95,41 @@ public class HomeFragment extends Fragment {
         //X-Achse einstellen
         mChart.getAxisRight().setEnabled(false);
         XAxis xAxis = mChart.getXAxis();
-        String[] values = new String[] {"00h", "1h", "2h", "3h", "4h", "5h", "6h", "7h", "8h", "9h", "10h", "11h", "12h", "13h", "14h", "15h", "16h", "17h", "18h", "19h", "20h", "21h", "22h", "23h", "00h"};
+        String[] values = new String[] {"00h", "1h", "2h", "3h", "4h", "5h", "6h", "7h", "8h",
+                "9h", "10h", "11h", "12h", "13h", "14h", "15h", "16h", "17h", "18h", "19h", "20h",
+                "21h", "22h", "23h", "00h"};
         xAxis.setValueFormatter(new MyXAxisValues(values));
         xAxis.setGranularity(1);
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
 
+        float firstXValues = 0f;
+        for(int i = 0; i < dv.length-1; i++){
+            yValues.add(new Entry(firstXValues, dv[i]));
+            firstXValues += 0.08333f;
+        }
+        yValues.add(new Entry(24, dv[dv.length-1]));
 
+        //Graphen erstellen
+        LineDataSet firstSet = new LineDataSet(yValues, " ");
+        firstSet.setFillAlpha(110);
+        firstSet.setColor(Color.TRANSPARENT);
+        firstSet.setValueTextColor(Color.TRANSPARENT);
+        firstSet.setCircleColor(Color.BLACK);
+        firstSet.setCircleRadius(3f);
+        firstSet.setCircleHoleRadius(3f);
+        dataSets.add(firstSet);
+        LineData data = new LineData(dataSets);
+        mChart.setData(data);
 
-        createAuthorization();
+        dexcomButton = view.findViewById(R.id.button_dexcom);
+        textView = view.findViewById(R.id.text_view_result_home);
+
+        jsonPlaceHolderApi = RestService.getRestService().create(JsonPlaceHolderApi.class);
+
+        //postAuthorization();
+        //postDexcomValues();
+        //postValues();
+        getValuesFromDate();
 
 
         //DexcomApi bei clicken auf Button
@@ -131,22 +138,14 @@ public class HomeFragment extends Fragment {
             public void onClick(View v) {
 
 
-                createDexcomValues();
+                //createDexcomValues();
                 try {
                     TimeUnit.SECONDS.sleep(1);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                getDexcomValues();
+                //getDexcomValues();
 
-            }
-        });
-
-        //addEventActivity bei clicken auf Button öffnen
-        addEventButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openAddEventActivity();
             }
         });
 
@@ -156,7 +155,7 @@ public class HomeFragment extends Fragment {
     }
 
 
-    //Values für X-Achse
+    //Value für X-Achse
     public class MyXAxisValues implements IAxisValueFormatter{
         private String[] mValues;
         public MyXAxisValues(String[] values){
@@ -169,88 +168,83 @@ public class HomeFragment extends Fragment {
         }
     }
 
+    public float getTimeToFloat(String time){
+
+        float flt= 0f;
+        String hours = time.substring(0, 2);
+        float minutes = Float.parseFloat(time.substring(3, 5));
+
+        minutes = ((minutes/60.0f)*100.0f);
+
+        if (minutes < 10){
+            hours = hours + "." + Float.toString(minutes).substring(0,1);
+        }
+
+        else hours = hours + "." + Float.toString(minutes).substring(0,2);
+
+
+        flt = Float.parseFloat(hours);
+
+        return  flt;
+    };
+
     public void openAddEventActivity(){
-        Intent intent = new Intent(getActivity(), addEventActivity.class);
+        Intent intent = new Intent(getActivity(), AddEventActivity.class);
         startActivity(intent);
     }
 
-    private void getDexcomValues(){
-        Call<List<DexcomValues>> call = jsonPlaceHolderApi.getDexcomValues();
+    private void getValuesFromDate(){
+        SimpleDateFormat dot = new SimpleDateFormat("yyyy-MM-dd");
+        String dateOfToday = dot.format(new Date());
+        String test = "2019-01-15";
 
-        call.enqueue(new Callback<List<DexcomValues>>() {
+        Call<List<Value>> call = jsonPlaceHolderApi.getValuesFromDate(test);
 
-
-
-
+        call.enqueue(new Callback<List<Value>>() {
 
             @Override
-            public void onResponse(Call<List<DexcomValues>> call, Response<List<DexcomValues>> response) {
+            public void onResponse(Call<List<Value>> call, Response<List<Value>> response) {
 
                 if(!response.isSuccessful()){
-                    lastValue.setText("Code: " + response.code());
+                    textView.setText("Code: " + response.code());
                     return;
                 }
 
-                List<DexcomValues> dexcomValues = response.body();
-                int i = 0;
-                float x = 1;
+                List<Value> userValues = response.body();
 
-                SimpleDateFormat dot = new SimpleDateFormat("yyyy-MM-dd");
-                String dateOfToday = dot.format(new Date());
-
-
-                String content = "Letzter Blutzuckerwert: \n";
-
-
-
-                for (DexcomValues dexcomValue : dexcomValues) {
-
-
-                    if(content.equals("Letzter Blutzuckerwert: \n")){
-                        content += "Date: " + dexcomValue.getDate() + "\n";
-                        content += "Blutzuckerwert: " + dexcomValue.getValue() + "\n\n";
-                    }
-
-
-
-                    if(dexcomValue.getDate().substring(0,10).equals(dateOfToday) ){
-                        dv[i] = dexcomValue.getValue();
-
-
-                    }
-
-                    yValues.add(new Entry(x, dv[i++]));
-
-
-
-
-
-
-                    x = x + 0.0833f;
-
-
-
-
-                    //Graphen erstellen
-                    LineDataSet set1 = new LineDataSet(yValues, " ");
-                    set1.setFillAlpha(110);
-                    set1.setColor(Color.TRANSPARENT);
-                    set1.setValueTextColor(Color.TRANSPARENT);
-                    set1.setCircleColor(Color.BLACK);
-                    set1.setCircleRadius(3f);
-                    set1.setCircleHoleRadius(3f);
-                    ArrayList<ILineDataSet> dataSets = new ArrayList<>();
-                    dataSets.add(set1);
-                    LineData data = new LineData(dataSets);
-                    mChart.setData(data );
-
-
+                for (Value value : userValues) {
+                    String content = "";
+                    content += "Date: " + value.getDate() + "\n";
+                    content += "Blutzuckerwert: " + value.getValue() + "\n\n";
+                    textView.append(content);
                 }
-                lastValue.append(content);
+
+                Value[] userValuesArr = new Value[userValues.size()];
+                userValuesArr = userValues.toArray(userValuesArr);
+
+                for (int i = 0; i < userValuesArr.length; i++){
+                    yValues2.add(new Entry(getTimeToFloat(userValuesArr[i].getTime()), userValuesArr[i].getValue()));
+                }
+
+                yValues2.add(new Entry(24, 500));
+
+                //Graphen erstellen
+                LineDataSet todaySet = new LineDataSet(yValues2, "Heutige Blutzuckerwerte");
+                todaySet.setFillAlpha(110);
+                todaySet.setColor(Color.TRANSPARENT);
+                todaySet.setValueTextColor(Color.TRANSPARENT);
+                todaySet.setCircleColor(Color.BLACK);
+                todaySet.setCircleRadius(3f);
+                todaySet.setCircleHoleRadius(3f);
+                todayDataSets.add(todaySet);
+                LineData todayData = new LineData(todayDataSets);
+                mChart.setData(todayData);
+
+
             }
             @Override
-            public void onFailure(Call<List<DexcomValues>> call, Throwable t) {
-                lastValue.setText(t.getMessage());
+            public void onFailure(Call<List<Value>> call, Throwable t) {
+                textView.setText(t.getMessage());
             }
 
 
@@ -262,7 +256,7 @@ public class HomeFragment extends Fragment {
 
     private void createAuthorization(){
 
-        Call<Authorization> call = jsonPlaceHolderApi.createAuthorization();
+        Call<Authorization> call = jsonPlaceHolderApi.postAuthorization();
 
         call.enqueue(new Callback<Authorization>(){
             @Override
@@ -278,14 +272,12 @@ public class HomeFragment extends Fragment {
 
     }
 
-    private void createDexcomValues(){
-
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
-        String date = sdf.format(new Date());
+    /*private void createDexcomValues(){
 
 
 
-        Call<DexcomValues> call = jsonPlaceHolderApi.createDexcomValues(date);
+
+        Call<DexcomValues> call = jsonPlaceHolderApi.postDexcomValues(date);
 
         call.enqueue(new Callback<DexcomValues>() {
             @Override
@@ -301,7 +293,7 @@ public class HomeFragment extends Fragment {
 
         }
 
-    }
+    }*/
 
 
 }

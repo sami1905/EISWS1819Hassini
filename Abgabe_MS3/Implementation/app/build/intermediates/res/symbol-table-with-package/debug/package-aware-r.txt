@@ -1067,7 +1067,6 @@ id bottom
 id bottom_navigation
 id buttonPanel
 id button_View
-id button_addEvent
 id button_dexcom
 id center
 id center_horizontal
@@ -1125,7 +1124,6 @@ id italic
 id item_touch_helper_previous_elevation
 id labeled
 id largeLabel
-id last_value
 id left
 id line1
 id line3
@@ -1217,6 +1215,7 @@ id textSpacerNoTitle
 id textStart
 id text_input_password_toggle
 id text_view_result
+id text_view_result_home
 id textinput_counter
 id textinput_error
 id textinput_helper_text

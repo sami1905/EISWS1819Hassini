@@ -24,18 +24,6 @@
 
         />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/button_addEvent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="32dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginBottom="22dp"
-        android:src="@drawable/ic_add"
-        app:backgroundTint="@color/colorPrimary" />
-
 
 
 
@@ -43,29 +31,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/white"
-
-
         android:layout_alignParentBottom="true"
         android:layout_alignParentTop="true"
         android:layout_marginBottom="74dp"
         android:layout_marginTop="171dp">
 
-
         <TextView
-            android:id="@+id/last_value"
-            android:layout_width="180dp"
-            android:layout_height="80dp"
-            android:height="80dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:background="@android:color/darker_gray"
-            android:textColor="@android:color/black"
-            android:textSize="15dp"
+            android:id="@+id/text_view_result_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-
-            />
 
     </android.support.v4.widget.NestedScrollView>
 

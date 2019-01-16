@@ -21,7 +21,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class addEventActivity extends AppCompatActivity {
+public class AddEventActivity extends AppCompatActivity {
 
     private Button quitButton;
 
@@ -65,7 +65,7 @@ public class addEventActivity extends AppCompatActivity {
                 0, 0, 0, 0, 0);
 
         //POST auf /events
-        Call<Event> call = jsonPlaceHolderApi.createEvent(event);
+        Call<Event> call = jsonPlaceHolderApi.postEvent(event);
         call.enqueue(new Callback<Event>() {
             @Override
             public void onResponse(Call<Event> call, Response<Event> response) {

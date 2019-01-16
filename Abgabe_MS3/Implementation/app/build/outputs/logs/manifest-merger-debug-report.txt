@@ -125,7 +125,7 @@ ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest
 		ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:32:21-52
 	android:scheme
 		ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:33:21-42
-activity#com.example.sami.diabetec.addEventActivity
+activity#com.example.sami.diabetec.AddEventActivity
 ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:36:9-63
 	android:name
 		ADDED from /Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/AndroidManifest.xml:36:19-51

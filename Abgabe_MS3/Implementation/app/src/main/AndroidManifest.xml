@@ -33,7 +33,7 @@
                     android:scheme="http" />
             </intent-filter>
         </activity>
-        <activity android:name=".addEventActivity"></activity>
+        <activity android:name=".AddEventActivity"></activity>
     </application>
 
 </manifest>

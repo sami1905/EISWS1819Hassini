@@ -4,9 +4,10 @@ import com.google.gson.annotations.SerializedName;
 
 public class DexcomValues {
 
-@SerializedName("displayTime")
+    @SerializedName("displayTime")
     private String date;
 
+    @SerializedName("value")
     private int value;
 
     public String getDate() {
