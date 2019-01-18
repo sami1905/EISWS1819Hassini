@@ -158,7 +158,7 @@ public class HomeFragment extends Fragment {
                 postDexcomValues();
 
                 try {
-                    TimeUnit.SECONDS.sleep(1);
+                    TimeUnit.SECONDS.sleep(3);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -323,7 +323,7 @@ public class HomeFragment extends Fragment {
             }
             @Override
             public void onFailure(Call<List<Value>> call, Throwable t) {
-                Toast.makeText(getContext(), t.getMessage(), Toast.LENGTH_LONG).show();
+               // Toast.makeText(getContext(), t.getMessage(), Toast.LENGTH_LONG).show();
             }
 
 
@@ -340,14 +340,14 @@ public class HomeFragment extends Fragment {
             @Override
             public void onResponse(Call<Value> call, Response<Value> response) {
 
-                Toast.makeText(getContext(), "CODE " + response.code() + ": " + "Blutzuckerwerte wurden aktualisiert", Toast.LENGTH_LONG).show();
+
 
             }
 
             @Override
             public void onFailure(Call<Value> call, Throwable t) {
 
-                Toast.makeText(getContext(), t.getMessage(), Toast.LENGTH_LONG).show();
+                //Toast.makeText(getContext(), t.getMessage(), Toast.LENGTH_LONG).show();
 
             }
         });
@@ -387,7 +387,7 @@ public class HomeFragment extends Fragment {
 
             @Override
             public void onFailure(Call<List<ValuesInPercent>> call, Throwable t) {
-                Toast.makeText(getContext(), t.getMessage(), Toast.LENGTH_LONG).show();
+                //Toast.makeText(getContext(), t.getMessage(), Toast.LENGTH_LONG).show();
 
             }
         });
@@ -419,7 +419,7 @@ public class HomeFragment extends Fragment {
 
             @Override
             public void onFailure(Call<List<Statics>> call, Throwable t) {
-                Toast.makeText(getContext(), t.getMessage(), Toast.LENGTH_LONG).show();
+               // Toast.makeText(getContext(), t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -436,7 +436,7 @@ public class HomeFragment extends Fragment {
 
             @Override
             public void onFailure(Call<Authorization> call, Throwable t) {
-                Toast.makeText(getContext(), t.getMessage(), Toast.LENGTH_LONG).show();
+
             }
         });
 
@@ -458,7 +458,7 @@ public class HomeFragment extends Fragment {
 
             @Override
             public void onFailure(Call<DexcomValues> call, Throwable t) {
-                Toast.makeText(getContext(), t.getMessage(), Toast.LENGTH_LONG).show();
+
             }
         });{
 

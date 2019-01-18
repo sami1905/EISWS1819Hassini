@@ -3,6 +3,66 @@
   "rateUnit": "mg/dL/min",
   "egvs": [
     {
+      "systemTime": "2019-01-18T17:11:44",
+      "displayTime": "2019-01-18T09:11:44",
+      "value": 135,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.6,
+      "realtimeValue": 139,
+      "smoothedValue": 135
+    },
+    {
+      "systemTime": "2019-01-18T17:06:44",
+      "displayTime": "2019-01-18T09:06:44",
+      "value": 135,
+      "status": null,
+      "trend": "flat",
+      "trendRate": 0.4,
+      "realtimeValue": 136,
+      "smoothedValue": 135
+    },
+    {
+      "systemTime": "2019-01-18T17:01:44",
+      "displayTime": "2019-01-18T09:01:43",
+      "value": 131,
+      "status": null,
+      "trend": "notComputable",
+      "trendRate": null,
+      "realtimeValue": 131,
+      "smoothedValue": 131
+    },
+    {
+      "systemTime": "2019-01-18T16:56:44",
+      "displayTime": "2019-01-18T08:56:43",
+      "value": 125,
+      "status": null,
+      "trend": "notComputable",
+      "trendRate": null,
+      "realtimeValue": 125,
+      "smoothedValue": 125
+    },
+    {
+      "systemTime": "2019-01-18T16:51:44",
+      "displayTime": "2019-01-18T08:51:44",
+      "value": 124,
+      "status": null,
+      "trend": "notComputable",
+      "trendRate": null,
+      "realtimeValue": 120,
+      "smoothedValue": 124
+    },
+    {
+      "systemTime": "2019-01-18T16:46:44",
+      "displayTime": "2019-01-18T08:46:44",
+      "value": 120,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.6,
+      "realtimeValue": 126,
+      "smoothedValue": 120
+    },
+    {
       "systemTime": "2019-01-18T16:41:44",
       "displayTime": "2019-01-18T08:41:43",
       "value": 121,
