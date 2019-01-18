@@ -1,1 +1,93 @@
-[]
+[
+  {
+    "id": 1,
+    "date": "2019-01-15",
+    "time": "22:22",
+    "value": 222,
+    "carbohydrates": 22,
+    "be": 22,
+    "correction": 2,
+    "meal_id": "222",
+    "insulin_units": 2,
+    "insulin_type": "Schnell"
+  },
+  {
+    "id": 2,
+    "date": "2019-01-16",
+    "time": "12:30",
+    "value": 120,
+    "carbohydrates": 12,
+    "be": 2,
+    "correction": 2,
+    "meal_id": "Brot",
+    "insulin_units": 1,
+    "insulin_type": "SChnell"
+  },
+  {
+    "id": 3,
+    "date": "2019-01-16",
+    "time": "16:22",
+    "value": 200,
+    "carbohydrates": 0,
+    "be": 0,
+    "correction": 0,
+    "meal_id": "",
+    "insulin_units": 0,
+    "insulin_type": ""
+  },
+  {
+    "id": 4,
+    "date": "2019-01-16",
+    "time": "16:22",
+    "carbohydrates": 0,
+    "be": 2,
+    "correction": 0,
+    "meal_id": "",
+    "insulin_units": 0,
+    "insulin_type": ""
+  },
+  {
+    "id": 5,
+    "date": "2019-01-16",
+    "time": "16:22",
+    "be": 2,
+    "meal_id": "",
+    "insulin_type": ""
+  },
+  {
+    "id": 6,
+    "date": "2019-01-16",
+    "time": "16:22",
+    "be": 2
+  },
+  {
+    "id": 7,
+    "date": "2019-01-16",
+    "time": "12:12",
+    "carbohydrates": 1
+  },
+  {
+    "id": 8,
+    "date": "2019-01-12",
+    "time": "12:12",
+    "value": 120,
+    "carbohydrates": 12,
+    "correction": 1,
+    "insulin_type": "Schnell"
+  },
+  {
+    "id": 9,
+    "date": "2019-01-16",
+    "time": "12:12",
+    "value": 120,
+    "be": 2,
+    "meal_id": "Brot"
+  },
+  {
+    "id": 10,
+    "date": "2019-01-19",
+    "time": "12:12",
+    "value": 122,
+    "meal_id": "Brot 60g"
+  }
+]

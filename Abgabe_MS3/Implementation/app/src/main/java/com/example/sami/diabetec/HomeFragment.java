@@ -138,7 +138,8 @@ public class HomeFragment extends Fragment {
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(), "Erstellen eines neues Events ist zur Zeit nicht möglich!", Toast.LENGTH_LONG).show();
+                openAddEventActivity();
+
             }
         });
 
@@ -164,6 +165,12 @@ public class HomeFragment extends Fragment {
                 }
 
                 postValues();
+
+                try {
+                    TimeUnit.SECONDS.sleep(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
 
                 ft.detach(HomeFragment.this).attach(HomeFragment.this).commit();
 
@@ -234,7 +241,7 @@ public class HomeFragment extends Fragment {
     };
 
     public void openAddEventActivity(){
-        Intent intent = new Intent(getActivity(), AddEventActivity.class);
+        Intent intent = new Intent(getContext(), AddEventActivity.class);
         startActivity(intent);
     }
 
@@ -312,9 +319,9 @@ public class HomeFragment extends Fragment {
 
                 }
 
-                textViewLastBZ.setText(lastValue.getValue() + " mg/dl");
-                textViewMinValue.setText(lowestValue.getValue() + " mg/dl");
-                textViewMaxValue.setText(highestValue.getValue() + " mg/dl");
+                textViewLastBZ.setText(lastValue.getTime().substring(0,5) + " Uhr:               "+ lastValue.getValue() + " mg/dl");
+                textViewMinValue.setText(lowestValue.getTime().substring(0,5) + " Uhr:               "+lowestValue.getValue() + " mg/dl");
+                textViewMaxValue.setText(highestValue.getTime().substring(0,5) + " Uhr:               "+ highestValue.getValue() + " mg/dl");
                 textViewAverageValue.setText((averageValue/nValues) + " mg/dl");
 
 

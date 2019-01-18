@@ -60,7 +60,7 @@ public class BookFragment extends Fragment {
                     String content = "";
                     //content += "ID: " + event.getId() + "\n";
                     content += "Date: " + event.getDate() + "\n";
-                    content += "Time: " + event.getTime() + "\n";
+                    //content += "Time: " + event.getTime() + "\n";
                     if(event.getValue() != 0){
                         content += "Blutzuckerwert: " + event.getValue() + "\n";
                     }
@@ -77,17 +77,17 @@ public class BookFragment extends Fragment {
                         content += "Korrektureinheiten: " + event.getCorrection() + "\n";
                     }
 
-                    if(event.getMeal_id() != 0){
-                        content += "Mahlzeit: " + event.getMeal_id() + "\n";
-                    }
+                    //if(event.getMeal_id() != 0){
+                       // content += "Mahlzeit: " + event.getMeal_id() + "\n";
+                    //}
 
                     if(event.getInsulin_units() != 0){
                         content += "Insulineinheiten: " + event.getInsulin_units() + "\n";
                     }
 
-                    if(event.getInsulin_type() != 0) {
-                        content += "Insulinart: " + event.getInsulin_type() + "\n";
-                    }
+                    //if(event.getInsulin_type() != 0) {
+                        //content += "Insulinart: " + event.getInsulin_type() + "\n";
+                   // }
 
                     content += "_________________________________________\n\n";
 

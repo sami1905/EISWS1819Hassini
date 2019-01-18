@@ -272,6 +272,44 @@ app.post('/events', bodyParser.json(), function(req, res){
                 "insulin_type" : req.body.insulin_type
             };
             
+            if(eventToAdd.value == 0){
+                var key = "value";
+                delete eventToAdd[key];
+            }
+            
+            if(eventToAdd.carbohydrates == 0){
+                var key = "carbohydrates";
+                delete eventToAdd[key];
+            }
+            
+            if(eventToAdd.be == 0){
+                var key = "be";
+                delete eventToAdd[key];
+            }
+            
+            if(eventToAdd.correction == 0){
+                var key = "correction";
+                delete eventToAdd[key];
+            }
+            
+            if(eventToAdd.meal_id == ""){
+                var key = "meal_id";
+                delete eventToAdd[key];
+            }
+            
+            if(eventToAdd.insulin_units == 0){
+                var key = "insulin_units";
+                delete eventToAdd[key];
+            }
+            
+            if(eventToAdd.insulin_type == ""){
+                var key = "insulin_type";
+                delete eventToAdd[key];
+            }
+            
+
+            
+            
             var insertIndexOfEvents = 0;
             
             for(insertIndexOfEvents; insertIndexOfEvents < values.length; insertIndexOfEvents++)
@@ -283,28 +321,48 @@ app.post('/events', bodyParser.json(), function(req, res){
             events.splice(insertIndexOfEvents, 0, eventToAdd);
             
             //add value of event to user_values
-            var valueToAdd = {
-                "id" : ++userValuesIndex,
-                "type" : "manuell",
-                "date" : date,
-                "time" : time,
-                "value" : req.body.value
-            };
+            if(req.body.value != 0){
+                
+                var valueToAdd = {
+                    "id" : ++userValuesIndex,
+                    "type" : "manuell",
+                    "date" : date,
+                    "time" : time,
+                    "value" : req.body.value
+                };
             
-            //search for the index by date of the value to add
-            var insertIndexOfValues = 0;
             
-            for(insertIndexOfValues; insertIndexOfValues < values.length; insertIndexOfValues++)
-            if(values[insertIndexOfValues].date == date){
-                break;
+                //search for the index by date of the value to add
+                var insertIndexOfValues = 0;
+            
+                for(insertIndexOfValues; insertIndexOfValues < values.length; insertIndexOfValues++)
+                    if(values[insertIndexOfValues].date == date){
+                    break;
+                }
+            
+                values.splice(insertIndexOfValues, 0, valueToAdd);
+                
             }
             
-            values.splice(insertIndexOfValues, 0, valueToAdd);
+            if (req.body.date != "" && 
+                req.body.value != 0 ||
+                req.body.carbohydrates != 0 ||
+                req.body.be != 0 || 
+                req.body.correction != 0 || 
+                req.body.meal != "" || 
+                req.body.insulin_units != 0 || 
+                req.body.insulin_type != "") {
+                
+                fs.writeFile(settings.user_events, JSON.stringify(events, null, 2));
+                fs.writeFile(settings.user_values, JSON.stringify(values, null, 2));
             
-            fs.writeFile(settings.user_events, JSON.stringify(events, null, 2));
-            fs.writeFile(settings.user_values, JSON.stringify(values, null, 2));
+                res.status(201).send(events[(insertIndexOfEvents)]);
+                
+            }
             
-            res.status(201).send(events[(insertIndexOfEvents)]);
+            
+            
+            else return res.status(406).send("Please stick to the form");
             
         
         });

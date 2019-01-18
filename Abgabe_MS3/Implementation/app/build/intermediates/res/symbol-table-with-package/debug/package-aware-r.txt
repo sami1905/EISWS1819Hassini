@@ -1069,6 +1069,7 @@ id all
 id always
 id async
 id auto
+id back_button
 id barrier
 id beginning
 id blocking
@@ -1101,8 +1102,16 @@ id dexcom_button
 id dimensions
 id direct
 id disableHome
-id edit_Date
 id edit_query
+id edit_text_be
+id edit_text_carbohydrates
+id edit_text_correction
+id edit_text_date
+id edit_text_insulin_type
+id edit_text_insulin_units
+id edit_text_meal
+id edit_text_time
+id edit_text_value
 id end
 id enterAlways
 id enterAlwaysCollapsed
@@ -1170,6 +1179,8 @@ id radio
 id right
 id right_icon
 id right_side
+id save_button
+id save_event
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
@@ -1335,6 +1346,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+menu add_event_menu
 menu bottom_navigation
 string abc_action_bar_home_description
 string abc_action_bar_up_description

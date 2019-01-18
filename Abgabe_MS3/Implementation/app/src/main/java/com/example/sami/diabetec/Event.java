@@ -10,9 +10,6 @@ public class Event {
     @SerializedName("date")
     private String date;
 
-    @SerializedName("time")
-    private String time;
-
     @SerializedName("value")
     private int value;
 
@@ -20,19 +17,19 @@ public class Event {
     private int carbohydrates;
 
     @SerializedName("be")
-    private int be;
+    private float be;
 
     @SerializedName("correction")
-    private int correction;
+    private float correction;
 
     @SerializedName("meal_id")
-    private int meal_id;
+    private String meal_id;
 
     @SerializedName("insulin_units")
-    private int insulin_units;
+    private float insulin_units;
 
     @SerializedName("insulin_type")
-    private int insulin_type;
+    private String insulin_type;
 
 
     public int getId() {
@@ -43,10 +40,6 @@ public class Event {
         return date;
     }
 
-    public String getTime() {
-        return time;
-    }
-
     public int getValue() {
         return value;
     }
@@ -55,29 +48,28 @@ public class Event {
         return carbohydrates;
     }
 
-    public int getBe() {
+    public float getBe() {
         return be;
     }
 
-    public int getCorrection() {
+    public float getCorrection() {
         return correction;
     }
 
-    public int getMeal_id() {
+    public String getMeal_id() {
         return meal_id;
     }
 
-    public int getInsulin_units() {
+    public float getInsulin_units() {
         return insulin_units;
     }
 
-    public int getInsulin_type() {
+    public String getInsulin_type() {
         return insulin_type;
     }
 
-    public Event(String date, String time, int value, int carbohydrates, int be, int correction, int meal_id, int insulin_units, int insulin_type) {
+    public Event(String date, int value, int carbohydrates, float be, float correction, String meal_id, float insulin_units, String insulin_type) {
         this.date = date;
-        this.time = time;
         this.value = value;
         this.carbohydrates = carbohydrates;
         this.be = be;
