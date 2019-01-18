@@ -1,4 +1,4 @@
-#Wed Jan 16 02:57:26 CET 2019
+#Fri Jan 18 13:01:42 CET 2019
 base.0=/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/transforms/dexMerger/debug/1
 path.0=classes.dex
 renamed.0=classes.dex

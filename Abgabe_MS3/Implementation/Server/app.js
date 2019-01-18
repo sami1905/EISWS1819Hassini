@@ -91,7 +91,7 @@ app.post('/dexcomValues/:date', bodyParser.json(), function(req, res){
     fs.readFile(settings.user_authorization, function(err, data){
         var userAuthorization = JSON.parse(data);
         var date = req.params.date;
-        console.log(date);
+        
 
         fs.readFile(settings.dexcom_data, function(err, data){
             var dexcomData = JSON.parse(data);
@@ -116,7 +116,7 @@ app.post('/dexcomValues/:date', bodyParser.json(), function(req, res){
 
                 res.on("end", function () {
                     var dexcomValues = Buffer.concat(chunks);
-                    console.log(dexcomValues.toString());
+                    //console.log(dexcomValues.toString());
                     fs.writeFile(settings.dexcom_data, JSON.stringify(JSON.parse(dexcomValues.toString()), null, 2));
 
                 });
@@ -214,8 +214,16 @@ app.get('/userValues/:date', bodyParser.json(), function(req, res){
             })
         }
     }
-    
-    res.status(200).send(userValuesOfDate);
+
+    if(err){
+        console.log(err);
+        res.status(500).send("database error")
+    }
+        
+    if(userValuesOfDate.length != 0) {
+        res.status(200).send(userValuesOfDate);
+    }
+    else res.status(500).send(null);
     
    }); 
 });
@@ -368,10 +376,10 @@ app.get('/valuesInPercent/:date', bodyParser.json(), function(req, res){
                        if(userValues[i].value <= 55){
                            nVeryLow++;
                        }
-                       if(userValues[i].value > 55 && userValues[i].value <= 80){
+                       else if(userValues[i].value > 55 && userValues[i].value <= 80){
                            nLow++;
                        }
-                       if(userValues[i].value >=180){
+                       else if(userValues[i].value >=180){
                            nHigh++;
                        }
                        else nWithinRange++;
@@ -386,15 +394,16 @@ app.get('/valuesInPercent/:date', bodyParser.json(), function(req, res){
                if(userValues[i].value <= 55){
                    nVeryLow++;
                }
-               if(userValues[i].value > 55 && userValues[i].value <= 80){
+               else if(userValues[i].value > 55 && userValues[i].value <= 80){
                    nLow++;
                }
-               if(userValues[i].value >=180){
+               else if(userValues[i].value >=180){
                    nHigh++;
                }   
-               else nWithinRange++;
+                else nWithinRange++;
            }
        }
+       
        percentVeryLow = (nVeryLow/nValues);
        percentLow = (nLow/nValues);
        percentWithinRange = (nWithinRange/nValues);
@@ -411,7 +420,10 @@ app.get('/valuesInPercent/:date', bodyParser.json(), function(req, res){
            "percentWithinRange" : percentWithinRange,
            "percentHigh" : percentHigh
        });
-   res.status(200).send(userValuesSinceDate);
+       if(nValues != 0){
+           res.status(200).send(userValuesSinceDate);
+       }
+       else res.status(500).send("error in database");
    });   
 });
 
@@ -471,7 +483,10 @@ app.get('/averageValue/:date', bodyParser.json(), function(req, res){
            "averageValue" : averageValue,
             "HbA1c" : HbA1c
         });
-        res.status(200).send(statics);   
+        if(nValues != 0){
+            res.status(200).send(statics);      
+        }
+        else res.status(500).send("error in database");
     });
 });
 

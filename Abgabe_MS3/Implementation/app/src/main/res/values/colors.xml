@@ -4,4 +4,7 @@
     <color name="colorPrimaryDark">#00574b</color>
     <color name="colorAccent">#D81B60</color>
     <color name="dexcom_green">#66B351</color>
+    <color name="gray">#EEE9E9</color>
+    <color name="gray2">#F1F1F1</color>
+    <color name="valueColor">#485045</color>
 </resources>

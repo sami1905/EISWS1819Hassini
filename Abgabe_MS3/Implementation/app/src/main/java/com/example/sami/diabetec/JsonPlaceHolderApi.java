@@ -49,9 +49,12 @@ public interface JsonPlaceHolderApi {
 
 
 
-
-
     //statics-Methods
+    @GET("valuesInPercent/{date}")
+    Call<List<ValuesInPercent>> getValuesInPercent(@Path("date") String date);
+
+    @GET("averageValue/{date}")
+    Call<List<Statics>> getStatics(@Path("date") String date);
 
 
 
