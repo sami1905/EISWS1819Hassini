@@ -6,6 +6,9 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@android:color/darker_gray</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">#C1FFC1</item>
+        <item name="colorControlActivated">#66CD02</item>
+        <item name="colorControlHighlight">#698B69</item>
     </style>
 
 </resources>

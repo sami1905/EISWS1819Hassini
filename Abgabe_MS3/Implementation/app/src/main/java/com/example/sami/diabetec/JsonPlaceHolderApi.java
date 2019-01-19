@@ -11,6 +11,11 @@ import retrofit2.http.Path;
 public interface JsonPlaceHolderApi {
     String url = "http://192.168.0.10:3000/";
 
+    //user-Methods
+
+    @GET("userData")
+    Call<UserData>getUserData();
+
     //dexcom-Methods
 
     @POST("authorization")

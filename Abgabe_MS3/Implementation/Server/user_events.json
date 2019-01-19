@@ -89,5 +89,56 @@
     "time": "12:12",
     "value": 122,
     "meal_id": "Brot 60g"
+  },
+  {
+    "id": 11,
+    "date": "2019-01-19",
+    "time": "11:11",
+    "value": 190
+  },
+  {
+    "id": 12,
+    "date": "2019-01-19",
+    "time": "11:11",
+    "value": 190
+  },
+  {
+    "id": 13,
+    "date": "2019-01-19",
+    "time": "02:12",
+    "value": 190,
+    "carbohydrates": 60,
+    "be": 5,
+    "correction": 3
+  },
+  {
+    "id": 14,
+    "date": "T",
+    "time": "",
+    "value": 100,
+    "carbohydrates": 60,
+    "be": 5,
+    "insulin_units": 12
+  },
+  {
+    "id": 15,
+    "date": "T",
+    "time": "",
+    "value": 200,
+    "correction": 3.3333333
+  },
+  {
+    "id": 16,
+    "date": "T",
+    "time": "",
+    "value": 190,
+    "correction": 3
+  },
+  {
+    "id": 17,
+    "date": "2019-01-19",
+    "time": "12:12",
+    "value": 190,
+    "correction": 3
   }
 ]

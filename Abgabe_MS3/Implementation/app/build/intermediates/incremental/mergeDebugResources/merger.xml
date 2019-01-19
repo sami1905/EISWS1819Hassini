@@ -3612,6 +3612,9 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@android:color/darker_gray</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">#C1FFC1</item>
+        <item name="colorControlActivated">#66CD02</item>
+        <item name="colorControlHighlight">#698B69</item>
     </style></file><file name="add_event_menu" path="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/main/res/menu/add_event_menu.xml" qualifiers="" type="menu"/></source><source path="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/generated/res/rs/debug"/><source path="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/generated/res/resValues/debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/debug/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/src/debug/res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="AlertDialog">
         <attr name="android:layout"/>
         <attr format="reference" name="buttonPanelSideLayout"/>

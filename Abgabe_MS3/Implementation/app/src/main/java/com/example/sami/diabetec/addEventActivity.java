@@ -7,6 +7,8 @@ import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -21,6 +23,7 @@ import com.google.gson.GsonBuilder;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import retrofit2.Call;
@@ -49,6 +52,8 @@ public class AddEventActivity extends AppCompatActivity {
 
     private Event event;
 
+    private UserData user;
+
 
 
 
@@ -76,8 +81,12 @@ public class AddEventActivity extends AppCompatActivity {
 
         jsonPlaceHolderApi = RestService.getRestService().create(JsonPlaceHolderApi.class);
 
-        setTitle("Ereignis hinzufügen");
+        editTextValue.addTextChangedListener(correctionTextWatcher);
+        editTextCarbohydrates.addTextChangedListener(beTextWatcher);
+        editTextBe.addTextChangedListener(insulinUnitsTextWatcher);
+        editTextCorrection.addTextChangedListener(insulinUnitsTextWatcher);
 
+        getUserData();
 
 
 
@@ -100,6 +109,81 @@ public class AddEventActivity extends AppCompatActivity {
         });
 
     }
+
+    private TextWatcher correctionTextWatcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+            String valueInput = editTextValue.getText().toString().trim();
+            if(!valueInput.isEmpty() && Integer.parseInt(valueInput) >= 180){
+                float correction = Float.valueOf(valueInput);
+                correction -= 100;
+                correction = correction/user.correcturPerUnit;
+
+                editTextCorrection.setText(Float.toString(correction));
+            }
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+
+
+        }
+    };
+
+    private TextWatcher beTextWatcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+            String carbohydrateInput = editTextCarbohydrates.getText().toString().trim();
+            if(!carbohydrateInput.isEmpty()){
+                float be = Float.valueOf(carbohydrateInput);
+                be = be/12;
+
+                editTextBe.setText(Float.toString(be));
+            }
+
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+
+        }
+    };
+
+    private TextWatcher insulinUnitsTextWatcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+            String beInput = editTextBe.getText().toString().trim();
+            String correctionInput = editTextCorrection.getText().toString().trim();
+            if(!beInput.isEmpty() && !correctionInput.isEmpty()){
+                float insulinUnits = Float.valueOf(correctionInput);
+                float be = Float.valueOf(beInput);
+                insulinUnits = insulinUnits + (be * user.beFactor);
+
+                editTextInsulinUnits.setText(Float.toString(insulinUnits));
+            }
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+
+        }
+    };
+
     private void saveEvent(){
         int value = 0;
         int carbohydrates = 0;
@@ -147,8 +231,12 @@ public class AddEventActivity extends AppCompatActivity {
             strInsulin_units = "";
         }
 
+        if(date.trim().isEmpty() || time.trim().isEmpty()){
+            Toast.makeText(this, "Bitte gibt Datum, Uhrzeit und mindestens einen weiteren Parameter ein!", Toast.LENGTH_LONG).show();
+            return;
+        }
 
-        if(!date.trim().isEmpty() && !time.trim().isEmpty() && value != 0 || carbohydrates != 0
+        if(value != 0 || carbohydrates != 0
                 || be != 0|| correction != 0 || !meal.trim().isEmpty() || insulin_units != 0
                 || !insulin_type.trim().isEmpty()){
 
@@ -174,7 +262,27 @@ public class AddEventActivity extends AppCompatActivity {
             return;
         }
 
+    }
 
+    private void getUserData(){
+        Call<UserData> call = jsonPlaceHolderApi.getUserData();
+
+        call.enqueue(new Callback<UserData>() {
+            @Override
+            public void onResponse(Call<UserData> call, Response<UserData> response) {
+                if(!response.isSuccessful() || response.code() == 406){
+                    Toast.makeText(getBaseContext(), "FEHLER-CODE " + response.code() + ": " + "Benutzerdaten sind nicht verfügbar!", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                user = response.body();
+            }
+
+            @Override
+            public void onFailure(Call<UserData> call, Throwable t) {
+
+            }
+        });
 
     }
 

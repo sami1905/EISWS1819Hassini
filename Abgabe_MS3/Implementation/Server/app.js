@@ -15,7 +15,8 @@ const settings = {
     dexcom_data: './dexcom_data.json',
     user_events: './user_events.json',
     user_values: './user_values.json',
-    user_authorization: './user_Authorization.json'
+    user_authorization: './user_Authorization.json',
+    user_data: './user_data.json'
 };
 
 app.use(function(err, req, res, next){
@@ -26,6 +27,19 @@ app.use(function(err, req, res, next){
 app.use(function(req, res, next){
   console.log('Time ' + Date.now() + ' | Request-Pfad: ' + req.path);
   next();
+});
+
+//User
+
+//GET UserData
+app.get('/userData', bodyParser.json(), function(req, res){
+   fs.readFile(settings.user_data, function(err, data){
+       var userData = JSON.parse(data);
+       if(userData == []){
+           res.status(500).send("error on database");
+       }
+       else res.status(200).send(userData);
+   });
 });
 
 //DEXCOM-API
@@ -344,7 +358,8 @@ app.post('/events', bodyParser.json(), function(req, res){
                 
             }
             
-            if (req.body.date != "" && 
+            if (date != "" && 
+                time != "" &&
                 req.body.value != 0 ||
                 req.body.carbohydrates != 0 ||
                 req.body.be != 0 || 

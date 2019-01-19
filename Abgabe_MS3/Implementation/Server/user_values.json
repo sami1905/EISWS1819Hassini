@@ -42448,10 +42448,59 @@
     "value": 202
   },
   {
+    "id": 6072,
+    "type": "manuell",
+    "date": "2019-01-19",
+    "time": "12:12",
+    "value": 190
+  },
+  {
+    "id": 6068,
+    "type": "manuell",
+    "date": "2019-01-19",
+    "time": "02:12",
+    "value": 190
+  },
+  {
+    "id": 6067,
+    "type": "manuell",
+    "date": "2019-01-19",
+    "time": "11:11",
+    "value": 190
+  },
+  {
+    "id": 6066,
+    "type": "manuell",
+    "date": "2019-01-19",
+    "time": "11:11",
+    "value": 190
+  },
+  {
     "id": 6065,
     "type": "manuell",
     "date": "2019-01-19",
     "time": "12:12",
     "value": 122
+  },
+  {
+    "id": 6071,
+    "type": "manuell",
+    "date": "T",
+    "time": "",
+    "value": 190
+  },
+  {
+    "id": 6070,
+    "type": "manuell",
+    "date": "T",
+    "time": "",
+    "value": 200
+  },
+  {
+    "id": 6069,
+    "type": "manuell",
+    "date": "T",
+    "time": "",
+    "value": 100
   }
 ]

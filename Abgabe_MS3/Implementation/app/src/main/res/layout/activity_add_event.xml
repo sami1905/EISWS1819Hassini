@@ -8,7 +8,15 @@
     tools:context=".AddEventActivity">
 
 
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_dark"
+        android:text="\nEreignis hinzufügen\n"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:textColor="@color/gray2"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -162,31 +170,27 @@
 
     <Button
         android:id="@+id/back_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginBottom="40dp"
         android:gravity="bottom"
-        android:text="Back"
+        android:text="Abbrechen"
         android:textSize="10dp" />
 
     <Button
         android:id="@+id/save_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="248dp"
-        android:layout_marginLeft="248dp"
-        android:layout_marginBottom="0dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="40dp"
         android:gravity="bottom"
         android:text="Speichern"
-        android:textSize="10dp" />
+        android:textSize="10dp"/>
 
 
 
