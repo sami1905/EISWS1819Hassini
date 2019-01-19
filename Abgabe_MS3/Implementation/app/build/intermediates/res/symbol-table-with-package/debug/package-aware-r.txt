@@ -25,6 +25,7 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array insulinTypes
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -1107,7 +1108,6 @@ id edit_text_be
 id edit_text_carbohydrates
 id edit_text_correction
 id edit_text_date
-id edit_text_insulin_type
 id edit_text_insulin_units
 id edit_text_meal
 id edit_text_time
@@ -1212,6 +1212,7 @@ id snackbar_text
 id snap
 id snapMargins
 id spacer
+id spinner_insulin_type
 id split_action_bar
 id spread
 id spread_inside

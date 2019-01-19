@@ -3,6 +3,96 @@
   "rateUnit": "mg/dL/min",
   "egvs": [
     {
+      "systemTime": "2019-01-19T00:36:43",
+      "displayTime": "2019-01-18T16:36:42",
+      "value": 153,
+      "status": null,
+      "trend": "fortyFiveDown",
+      "trendRate": -1.1,
+      "realtimeValue": 153,
+      "smoothedValue": null
+    },
+    {
+      "systemTime": "2019-01-19T00:31:43",
+      "displayTime": "2019-01-18T16:31:42",
+      "value": 159,
+      "status": null,
+      "trend": "fortyFiveDown",
+      "trendRate": -1,
+      "realtimeValue": 159,
+      "smoothedValue": 159
+    },
+    {
+      "systemTime": "2019-01-19T00:26:43",
+      "displayTime": "2019-01-18T16:26:42",
+      "value": 164,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.9,
+      "realtimeValue": 165,
+      "smoothedValue": 164
+    },
+    {
+      "systemTime": "2019-01-19T00:21:43",
+      "displayTime": "2019-01-18T16:21:42",
+      "value": 169,
+      "status": null,
+      "trend": "fortyFiveDown",
+      "trendRate": -1.1,
+      "realtimeValue": 169,
+      "smoothedValue": 169
+    },
+    {
+      "systemTime": "2019-01-19T00:16:43",
+      "displayTime": "2019-01-18T16:16:42",
+      "value": 173,
+      "status": null,
+      "trend": "fortyFiveDown",
+      "trendRate": -1.1,
+      "realtimeValue": 174,
+      "smoothedValue": 173
+    },
+    {
+      "systemTime": "2019-01-19T00:11:43",
+      "displayTime": "2019-01-18T16:11:43",
+      "value": 179,
+      "status": null,
+      "trend": "fortyFiveDown",
+      "trendRate": -1.2,
+      "realtimeValue": 177,
+      "smoothedValue": 179
+    },
+    {
+      "systemTime": "2019-01-19T00:06:43",
+      "displayTime": "2019-01-18T16:06:42",
+      "value": 186,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.8,
+      "realtimeValue": 187,
+      "smoothedValue": 186
+    },
+    {
+      "systemTime": "2019-01-19T00:01:43",
+      "displayTime": "2019-01-18T16:01:42",
+      "value": 193,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.5,
+      "realtimeValue": 193,
+      "smoothedValue": 193
+    },
+    {
+      "systemTime": "2019-01-18T23:56:43",
+      "displayTime": "2019-01-18T15:56:43",
+      "value": 199,
+      "status": null,
+      "trend": "flat",
+      "trendRate": -0.2,
+      "realtimeValue": 200,
+      "smoothedValue": 199
+    },
+    {
       "systemTime": "2019-01-18T23:51:43",
       "displayTime": "2019-01-18T15:51:43",
       "value": 202,

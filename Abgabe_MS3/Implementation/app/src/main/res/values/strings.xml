@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">Diabetec</string>
     <string name="asset_statements" translatable="false">[{ \"include\": \"https://www.diabetec.com/.well-known/assetlinks.json\" }]</string>
+    <string-array name="insulinTypes">
+        <item></item>
+        <item>Schnellwirkendes Insulin</item>
+        <item>Langsamwirkendes Insulin</item>
+    </string-array>
 
 </resources>

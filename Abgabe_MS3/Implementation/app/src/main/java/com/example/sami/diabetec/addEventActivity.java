@@ -13,8 +13,11 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,7 +38,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import static android.widget.Toast.LENGTH_LONG;
 import static java.security.AccessController.getContext;
 
-public class AddEventActivity extends AppCompatActivity {
+public class AddEventActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     private static final String TAG = "AddEventActivity";
 
     private EditText editTextDate;
@@ -46,7 +49,8 @@ public class AddEventActivity extends AppCompatActivity {
     private EditText editTextCorrection;
     private EditText editTextMeal;
     private EditText editTextInsulinUnits;
-    private EditText editTextInsulinType;
+    private Spinner spinnerInsulinType;
+    private String insulin_type;
 
     private JsonPlaceHolderApi jsonPlaceHolderApi;
 
@@ -77,7 +81,11 @@ public class AddEventActivity extends AppCompatActivity {
         editTextCorrection = findViewById(R.id.edit_text_correction);
         editTextMeal = findViewById(R.id.edit_text_meal);
         editTextInsulinUnits = findViewById(R.id.edit_text_insulin_units);
-        editTextInsulinType = findViewById(R.id.edit_text_insulin_type);
+        spinnerInsulinType = findViewById(R.id.spinner_insulin_type);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.insulinTypes, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerInsulinType.setAdapter(adapter);
+        spinnerInsulinType.setOnItemSelectedListener(this);
 
         jsonPlaceHolderApi = RestService.getRestService().create(JsonPlaceHolderApi.class);
 
@@ -199,7 +207,7 @@ public class AddEventActivity extends AppCompatActivity {
         String strCorrection = editTextCorrection.getText().toString();
         String meal = editTextMeal.getText().toString();
         String strInsulin_units = editTextInsulinUnits.getText().toString();
-        String insulin_type = editTextInsulinType.getText().toString();
+
 
         try {
             value = Integer.parseInt(strValue);
@@ -247,11 +255,11 @@ public class AddEventActivity extends AppCompatActivity {
             postEvent(newEvent);
             Toast.makeText(this , "Ereignis wurde erfolgreich gespeichert!", Toast.LENGTH_LONG).show();
 
-            try {
+            /*try {
                 TimeUnit.SECONDS.sleep(3);
             } catch (InterruptedException e) {
                 e.printStackTrace();
-            }
+            }*/
 
             openMainActivity();
 
@@ -271,7 +279,7 @@ public class AddEventActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<UserData> call, Response<UserData> response) {
                 if(!response.isSuccessful() || response.code() == 406){
-                    Toast.makeText(getBaseContext(), "FEHLER-CODE " + response.code() + ": " + "Benutzerdaten sind nicht verfügbar!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(), "FEHLER-CODE " + response.code() + ": " + "Benutzerdaten sind nicht verfügbar! BE- und Korrektur-Rechner sehen nicht zur Verfügung!", Toast.LENGTH_LONG).show();
                     return;
                 }
 
@@ -311,13 +319,6 @@ public class AddEventActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.menu.add_event_menu, menu);
-        return true;
-    }
-
-    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.save_event:
@@ -333,4 +334,19 @@ public class AddEventActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        String text = parent.getItemAtPosition(position).toString();
+        if(!text.trim().isEmpty()){
+            Toast.makeText(parent.getContext(), "Auswahl: " + text, Toast.LENGTH_SHORT).show();
+
+        }
+        insulin_type = parent.getItemAtPosition(position).toString();
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
 }
