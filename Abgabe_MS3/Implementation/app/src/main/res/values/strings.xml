@@ -7,4 +7,11 @@
         <item>Langsamwirkendes Insulin</item>
     </string-array>
 
+    <string-array name="numberOfDays">
+        <item>Werte aus den letzten 7 Tagen</item>
+        <item>Werte aus den letzten 14 Tagen</item>
+        <item>Werte aus den letzten 30 Tagen</item>
+        <item>Werte seit Beginn</item>
+    </string-array>
+
 </resources>

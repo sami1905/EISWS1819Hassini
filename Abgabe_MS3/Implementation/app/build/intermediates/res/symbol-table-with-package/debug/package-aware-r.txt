@@ -26,6 +26,7 @@ animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
 array insulinTypes
+array numberOfDays
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -1001,7 +1002,9 @@ drawable abc_vector_test
 drawable add_button
 drawable avd_hide_password
 drawable avd_show_password
+drawable back_button
 drawable button_add
+drawable button_back
 drawable button_dexcom
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
@@ -1036,6 +1039,8 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable push_button_dexcom
 drawable pushed_add_button
+drawable pushed_back_button
+drawable spinner_arrow
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
@@ -1181,7 +1186,6 @@ id right
 id right_icon
 id right_side
 id save_button
-id save_event
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
@@ -1214,6 +1218,7 @@ id snap
 id snapMargins
 id spacer
 id spinner_insulin_type
+id spinner_number_of_days
 id split_action_bar
 id spread
 id spread_inside
@@ -1237,14 +1242,19 @@ id textStart
 id textView_example
 id textView_example2
 id text_input_password_toggle
+id text_view_averageBZ
 id text_view_averageValue
 id text_view_averageValue2
 id text_view_gesamt
 id text_view_hba1c
+id text_view_hba1c_report
+id text_view_highest
 id text_view_home
 id text_view_lastBZ
+id text_view_lowest
 id text_view_maxValue
 id text_view_minValue
+id text_view_numberOfBZ
 id text_view_result
 id text_view_timeInRange
 id textinput_counter
@@ -1319,7 +1329,14 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_add_event
+layout activity_average_day
+layout activity_average_values
+layout activity_best_day
 layout activity_main
+layout activity_muster
+layout activity_overlay
+layout activity_statics_by_hour
+layout activity_time_within_range
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1351,7 +1368,6 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
-menu add_event_menu
 menu bottom_navigation
 string abc_action_bar_home_description
 string abc_action_bar_up_description

@@ -17,4 +17,8 @@ public class ExampleItem {
     public String getDescription() {
         return description;
     }
+
+    public void changeTitle(String text){
+        title = text;
+    }
 }

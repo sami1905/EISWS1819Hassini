@@ -318,17 +318,6 @@ public class AddEventActivity extends AppCompatActivity implements AdapterView.O
 
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.save_event:
-                saveEvent();
-                return true;
-                default:
-                    return super.onOptionsItemSelected(item);
-        }
-    }
-
     public void openMainActivity(){
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);

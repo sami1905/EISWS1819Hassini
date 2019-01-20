@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class Statics {
 
-    @SerializedName("nValue")
+    @SerializedName("nValues")
     int nValues;
 
     @SerializedName("minValue")

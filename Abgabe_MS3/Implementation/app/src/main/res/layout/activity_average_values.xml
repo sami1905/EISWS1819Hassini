@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@android:color/holo_green_dark"
+        />
+
+
+    <TextView
+        android:layout_width="190dp"
+        android:layout_height="50dp"
+        android:text="Durchschnittswerte"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:textColor="@color/gray2"/>
+
+
+
+    <Spinner
+        android:id="@+id/spinner_number_of_days"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/gray2"
+        android:textSize="20dp"
+        android:layout_marginTop="87dp"
+        />
+
+
+    <View
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right"
+        android:layout_marginTop="95dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/spinner_arrow" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:scrollbars="vertical"
+        android:layout_alignParentLeft="true"
+        android:background="@color/gray"
+        android:layout_marginTop="127dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray2"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            android:text="  Anzahl Bluzuckerwerte"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="2dp"
+            />
+
+        <TextView
+            android:id="@+id/text_view_numberOfBZ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textColor="@color/valueColor"
+            android:gravity="right"
+            android:layout_marginRight="10dp"
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray2"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            android:text="  Niedrigster Bluzuckerwerte"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="2dp"
+            />
+
+        <TextView
+            android:id="@+id/text_view_lowest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textColor="@color/valueColor"
+            android:gravity="right"
+            android:layout_marginRight="10dp"
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray2"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            android:text="  Höchster Bluzuckerwerte"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="2dp"
+            />
+
+        <TextView
+            android:id="@+id/text_view_highest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textColor="@color/valueColor"
+            android:gravity="right"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray2"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            android:text="  Durchschnittlicher Bluzuckerwerte"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="2dp"
+            />
+
+        <TextView
+            android:id="@+id/text_view_averageBZ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textColor="@color/valueColor"
+            android:gravity="right"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray2"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            android:text="  HbA1c"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="2dp"
+            />
+
+        <TextView
+            android:id="@+id/text_view_hba1c_report"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textColor="@color/valueColor"
+            android:gravity="right"
+            android:layout_marginRight="10dp"
+            />
+
+
+    </LinearLayout>
+</RelativeLayout>

@@ -8,13 +8,21 @@
     tools:context=".AddEventActivity">
 
 
-    <TextView
+    <View
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:background="@android:color/holo_green_dark"
-        android:text="\nEreignis hinzufügen\n"
+        />
+
+
+    <TextView
+        android:layout_width="190dp"
+        android:layout_height="50dp"
+        android:text="Ereignis hinzufügen"
         android:textSize="20dp"
         android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
         android:padding="5dp"
         android:textColor="@color/gray2"/>
 
@@ -40,6 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/gray2"
+            android:textColor="@color/valueColor"
             android:text="Datum: "
             android:layout_marginTop="5dp"/>
 
@@ -55,6 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/gray2"
+            android:textColor="@color/valueColor"
             android:text="Uhrzeit: "
             android:layout_marginTop="5dp"/>
 
@@ -64,12 +74,13 @@
             android:layout_height="wrap_content"
             android:background="@color/gray2"
             android:hint="HH:MM"
-            android:inputType="number|text|time"/>
+            android:inputType="text"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/gray2"
+            android:textColor="@color/valueColor"
             android:text="Blutzuckerwert: "
             android:layout_marginTop="5dp"/>
 
@@ -85,6 +96,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/gray2"
+            android:textColor="@color/valueColor"
             android:text="Kohlenhydrate: "
             android:layout_marginTop="5dp"/>
 
@@ -100,6 +112,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/gray2"
+            android:textColor="@color/valueColor"
             android:text="BE: "
             android:layout_marginTop="5dp"/>
 
@@ -115,6 +128,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/gray2"
+            android:textColor="@color/valueColor"
             android:text="Korrektureinheiten: "
             android:layout_marginTop="5dp"/>
 
@@ -131,6 +145,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/gray2"
+            android:textColor="@color/valueColor"
             android:text="Mahlzeit: "
             android:layout_marginTop="5dp"/>
 
@@ -146,6 +161,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/gray2"
+            android:textColor="@color/valueColor"
             android:text="Insulineinheiten: "
             android:layout_marginTop="5dp"/>
 
@@ -161,6 +177,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/gray2"
+            android:textColor="@color/valueColor"
             android:text="Insulinart: "
             android:layout_marginTop="5dp"/>
 
