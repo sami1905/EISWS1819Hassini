@@ -43,5 +43,35 @@
     "be": 4.1666665,
     "insulin_units": 8.333333,
     "insulin_type": "Schnellwirkendes Insulin"
+  },
+  {
+    "id": 5,
+    "date": "2019-01-19",
+    "time": "14:12",
+    "value": 392,
+    "carbohydrates": 70,
+    "be": 5.8333335,
+    "correction": 9.733334,
+    "insulin_units": 21.400002
+  },
+  {
+    "id": 6,
+    "date": "2019-01-20",
+    "time": "11:55",
+    "value": 417,
+    "correction": 10.566667
+  },
+  {
+    "id": 7,
+    "date": "2019-01-20",
+    "time": "13:14",
+    "value": 375,
+    "correction": 9.166667
+  },
+  {
+    "id": 8,
+    "date": "2019-01-20",
+    "time": "18:00",
+    "value": 45
   }
 ]

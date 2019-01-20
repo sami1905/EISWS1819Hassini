@@ -61,6 +61,12 @@ public interface JsonPlaceHolderApi {
     @GET("averageValue/{date}")
     Call<List<Statics>> getStatics(@Path("date") String date);
 
+    @GET("valuesLow/{date}")
+    Call<List<Value>> getValuesLow(@Path("date") String date);
+
+    @GET("valuesHigh/{date}")
+    Call<List<Value>> getValuesHigh(@Path("date") String date);
+
 
 
 

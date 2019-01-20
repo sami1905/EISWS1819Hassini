@@ -1259,6 +1259,7 @@ id text_view_lastBZ
 id text_view_lowest
 id text_view_maxValue
 id text_view_minValue
+id text_view_muster
 id text_view_nValues_book
 id text_view_numberOfBZ
 id text_view_timeInRange

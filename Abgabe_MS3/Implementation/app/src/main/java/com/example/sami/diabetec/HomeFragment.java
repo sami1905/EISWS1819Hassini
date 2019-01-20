@@ -191,9 +191,7 @@ public class HomeFragment extends Fragment {
 
         jsonPlaceHolderApi = RestService.getRestService().create(JsonPlaceHolderApi.class);
 
-        //postAuthorization();
-        //postDexcomValues();
-        //postValues();
+        
         getValuesFromDate();
         getValuesInPercent();
         getStatics();
@@ -475,3 +473,4 @@ public class HomeFragment extends Fragment {
 
 
 }
+

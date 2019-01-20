@@ -567,32 +567,56 @@ app.get('/averageValue/:date', bodyParser.json(), function(req, res){
     });
 });
 
-//GET /valuesOutOfRange
-app.get('/valuesOutOfRange', bodyParser.json(), function(req, res) {
+//GET /valuesLow/:date
+app.get('/valuesLow/:date', bodyParser.json(), function(req, res) {
     fs.readFile(settings.user_values, function(err,data){
         var userValues = JSON.parse(data);
-        var valuesOutOfRange = {
-            "low" : [],
-            "high": []
-        };
+        var date = req.params.date;
+        var valuesLow = [];
         
         for(var i = 0; i< userValues.length; i++){
-            if(userValues[i].value <= 70){
-                valuesOutOfRange.low.push({
-                    "date": userValues[i].date,
-                    "time": userValues[i].time,
-                    "value": userValues[i].value
-                });
+            if(userValues[i].date == date){
+                for(var i; i < userValues.length; i++){
+                    if(userValues[i].value <= 70){
+                        valuesLow.push({
+                        "date": userValues[i].date,
+                        "time": userValues[i].time,
+                        "value": userValues[i].value
+                        });
+                    }
+                
+                }
             }
-            if(userValues[i].value >= 180){
-                valuesOutOfRange.high.push({
-                    "date": userValues[i].date,
-                    "time": userValues[i].time,
-                    "value": userValues[i].value
-                });
-            }   
+            
         }   
-        res.status(200).send(valuesOutOfRange);   
+        res.status(200).send(valuesLow);   
+
+    });
+});
+
+//GET /valuesHigh/:date
+app.get('/valuesHigh/:date', bodyParser.json(), function(req, res) {
+    fs.readFile(settings.user_values, function(err,data){
+        var userValues = JSON.parse(data);
+        var date = req.params.date;
+        var valuesHigh = []
+        
+        for(var i = 0; i< userValues.length; i++){
+            if(userValues[i].date == date){
+                for(var i; i < userValues.length; i++){
+                    if(userValues[i].value >= 180){
+                        valuesHigh.push({
+                            "date": userValues[i].date,
+                            "time": userValues[i].time,
+                            "value": userValues[i].value
+                        });
+                    }   
+                
+                }
+            }
+            
+        }   
+        res.status(200).send(valuesHigh);   
 
     });
 });
