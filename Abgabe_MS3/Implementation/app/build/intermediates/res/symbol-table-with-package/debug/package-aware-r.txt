@@ -1149,7 +1149,8 @@ id largeLabel
 id left
 id line1
 id line3
-id lineChart
+id lineChart_book
+id lineChart_home
 id listMode
 id list_item
 id masked
@@ -1181,6 +1182,7 @@ id pin
 id progress_circular
 id progress_horizontal
 id radio
+id recycler_view_book
 id recycler_view_reports
 id right
 id right_icon
@@ -1245,6 +1247,9 @@ id text_input_password_toggle
 id text_view_averageBZ
 id text_view_averageValue
 id text_view_averageValue2
+id text_view_averageValue_book
+id text_view_dateOfDay
+id text_view_events_book
 id text_view_gesamt
 id text_view_hba1c
 id text_view_hba1c_report
@@ -1254,9 +1259,10 @@ id text_view_lastBZ
 id text_view_lowest
 id text_view_maxValue
 id text_view_minValue
+id text_view_nValues_book
 id text_view_numberOfBZ
-id text_view_result
 id text_view_timeInRange
+id text_view_timeInRange_book
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -1337,6 +1343,7 @@ layout activity_muster
 layout activity_overlay
 layout activity_statics_by_hour
 layout activity_time_within_range
+layout book_item
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1351,7 +1358,6 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
-layout example_item
 layout fragment_book
 layout fragment_home
 layout fragment_report
@@ -1364,6 +1370,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout report_item
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material

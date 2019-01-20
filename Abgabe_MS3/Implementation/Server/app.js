@@ -206,7 +206,11 @@ app.post('/userValues', bodyParser.json(),function(req, res){
 app.get('/userValues', bodyParser.json(), function(req, res){
     fs.readFile(settings.user_values, function(err, data){
         var userValues = JSON.parse(data);
-        res.status(200).send(userValues);
+        
+        if(userValues.length != 0) {
+            res.status(200).send(userValues);
+        }
+        else res.status(500).send(null);
   });
 });
 
@@ -263,8 +267,8 @@ app.post('/events', bodyParser.json(), function(req, res){
             var events = JSON.parse(data);
             var numberOfEvents = events.length;
             var max_index = 0;
-            var date = req.body.date.substring(0,10);
-            var time = req.body.date.substring(11,19);
+            var date = req.body.date;
+            var time = req.body.time;
         
             //id of the last event is inserted into max_index
             for(var i = 0; i< numberOfEvents; i++){

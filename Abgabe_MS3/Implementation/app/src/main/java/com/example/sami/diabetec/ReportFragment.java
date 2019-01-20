@@ -1,12 +1,10 @@
 package com.example.sami.diabetec;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -16,9 +14,9 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 
 public class ReportFragment extends Fragment {
-    private ArrayList<ExampleItem> exampleList = new ArrayList<>();
+    private ArrayList<ReportItem> exampleList = new ArrayList<>();
     private RecyclerView mRecyclerView;
-    private ExampleAdapter mAdapter;
+    private ReportsAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
 
     @Nullable
@@ -28,13 +26,13 @@ public class ReportFragment extends Fragment {
 
 
 
-        exampleList.add(new ExampleItem("Durchschnittswerte", "Schau Dir Deine Durchschnittswerte, wie z.B. Deinen HbA1c-Wert, an."));
-        exampleList.add(new ExampleItem("Muster", "Schau Dir an, wann Deine Blutzuckerwerte in den letzten 7 Tagen ein Muster aufweisen."));
-        exampleList.add(new ExampleItem("Zeit im Zielbereich", "Schau Dir an, wie oft Deine Blutzuckerwerte über, unter und im Zielbereich liegen."));
-        exampleList.add(new ExampleItem("Durchschnittstag", "Schau Dir Deinen durchschnittlichen Tag an."));
-        exampleList.add(new ExampleItem("Bester Tag", "Schau Dir Deinen besten Tag an."));
-        exampleList.add(new ExampleItem("Überlagerung", "Schau Dir alle Graphen der letzten 7 Tage an."));
-        exampleList.add(new ExampleItem("Stündliche Statistiken", "Schau Dir Deine stündlichen Statistiken an."));
+        exampleList.add(new ReportItem("Durchschnittswerte", "Schau Dir Deine Durchschnittswerte, wie z.B. Deinen HbA1c-Wert, an."));
+        exampleList.add(new ReportItem("Muster", "Schau Dir an, wann Deine Blutzuckerwerte in den letzten 7 Tagen ein Muster aufweisen."));
+        exampleList.add(new ReportItem("Zeit im Zielbereich", "Schau Dir an, wie oft Deine Blutzuckerwerte über, unter und im Zielbereich liegen."));
+        exampleList.add(new ReportItem("Durchschnittstag", "Schau Dir Deinen durchschnittlichen Tag an."));
+        exampleList.add(new ReportItem("Bester Tag", "Schau Dir Deinen besten Tag an."));
+        exampleList.add(new ReportItem("Überlagerung", "Schau Dir alle Graphen der letzten 7 Tage an."));
+        exampleList.add(new ReportItem("Stündliche Statistiken", "Schau Dir Deine stündlichen Statistiken an."));
 
 
 
@@ -42,12 +40,12 @@ public class ReportFragment extends Fragment {
         mRecyclerView = view.findViewById(R.id.recycler_view_reports);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(getContext());
-        mAdapter = new ExampleAdapter(exampleList);
+        mAdapter = new ReportsAdapter(exampleList);
 
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
 
-        mAdapter.setOnItemClickListener(new ExampleAdapter.OnItemClickListener() {
+        mAdapter.setOnItemClickListener(new ReportsAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
                 if(position == 0){

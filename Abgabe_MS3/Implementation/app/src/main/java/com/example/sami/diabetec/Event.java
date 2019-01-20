@@ -10,6 +10,10 @@ public class Event {
     @SerializedName("date")
     private String date;
 
+    @SerializedName("time")
+    private String time;
+
+
     @SerializedName("value")
     private int value;
 
@@ -40,6 +44,10 @@ public class Event {
         return date;
     }
 
+    public String getTime() {
+        return time;
+    }
+
     public int getValue() {
         return value;
     }
@@ -68,8 +76,9 @@ public class Event {
         return insulin_type;
     }
 
-    public Event(String date, int value, int carbohydrates, float be, float correction, String meal_id, float insulin_units, String insulin_type) {
+    public Event(String date, String time, int value, int carbohydrates, float be, float correction, String meal_id, float insulin_units, String insulin_type) {
         this.date = date;
+        this.time = time;
         this.value = value;
         this.carbohydrates = carbohydrates;
         this.be = be;

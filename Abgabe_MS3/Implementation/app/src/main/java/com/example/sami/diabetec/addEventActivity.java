@@ -248,7 +248,7 @@ public class AddEventActivity extends AppCompatActivity implements AdapterView.O
                 || be != 0|| correction != 0 || !meal.trim().isEmpty() || insulin_units != 0
                 || !insulin_type.trim().isEmpty()){
 
-            Event newEvent = new Event (date + "T" + time, value, carbohydrates, be,
+            Event newEvent = new Event (date , time, value, carbohydrates, be,
                     correction, meal, insulin_units, insulin_type);
 
 

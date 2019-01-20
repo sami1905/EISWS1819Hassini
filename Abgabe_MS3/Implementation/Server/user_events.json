@@ -1,1 +1,47 @@
-[]
+[
+  {
+    "id": 1,
+    "date": "2019-01-20",
+    "time": "17:33",
+    "value": 227,
+    "carbohydrates": 42,
+    "be": 3.5,
+    "correction": 4.233333,
+    "meal_id": "Brot 60g",
+    "insulin_units": 11.233334,
+    "insulin_type": "Schnellwirkendes Insulin"
+  },
+  {
+    "id": 2,
+    "date": "2019-01-20",
+    "time": "17:40",
+    "value": 200,
+    "carbohydrates": 24,
+    "be": 2,
+    "correction": 3.3333333,
+    "meal_id": "Snickers 1x",
+    "insulin_units": 7.333333,
+    "insulin_type": "Schnellwirkendes Insulin"
+  },
+  {
+    "id": 3,
+    "date": "2019-01-20",
+    "time": "17:45",
+    "value": 190,
+    "carbohydrates": 36,
+    "be": 3,
+    "correction": 3,
+    "meal_id": "Brownies 50g",
+    "insulin_units": 9,
+    "insulin_type": "Schnellwirkendes Insulin"
+  },
+  {
+    "id": 4,
+    "date": "2019-01-20",
+    "time": "18:00",
+    "carbohydrates": 50,
+    "be": 4.1666665,
+    "insulin_units": 8.333333,
+    "insulin_type": "Schnellwirkendes Insulin"
+  }
+]

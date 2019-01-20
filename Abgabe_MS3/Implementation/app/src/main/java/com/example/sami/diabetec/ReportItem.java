@@ -1,11 +1,11 @@
 package com.example.sami.diabetec;
 
-public class ExampleItem {
+public class ReportItem {
 
     private String title;
     private String description;
 
-    public ExampleItem(String title, String description) {
+    public ReportItem(String title, String description) {
         this.title = title;
         this.description = description;
     }

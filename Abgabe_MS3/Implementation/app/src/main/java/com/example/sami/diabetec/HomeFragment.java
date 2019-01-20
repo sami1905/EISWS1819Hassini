@@ -71,7 +71,7 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         final FragmentTransaction ft = getFragmentManager().beginTransaction();
-        mChart = view.findViewById(R.id.lineChart);
+        mChart = view.findViewById(R.id.lineChart_home);
 
         //Chart anlegen
         mChart.setDragEnabled(true);

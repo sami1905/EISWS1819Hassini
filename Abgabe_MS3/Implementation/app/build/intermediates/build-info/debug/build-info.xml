@@ -5,46 +5,47 @@
     build-mode="COLD"
     density="xhdpi"
     format="10"
+    ir-eligibility="COMPATIBLE"
     plugin-version="3.2.1"
-    timestamp="1547947624788"
+    timestamp="1548003247073"
     token="5096034102087738964"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="238" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="43" />
     <task
         name="verifier"
-        duration="0" />
+        duration="7" />
 
+    <artifact
+        location="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+        type="SPLIT" />
     <artifact
         location="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
         type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1547933430869"
-        verifier="COLD_SWAP_REQUESTED" >
+        timestamp="1547999447269"
+        verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+            location="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
+        <artifact
+            location="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+            type="SPLIT_MAIN" />
         <artifact
             location="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            location="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
             location="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
@@ -53,61 +54,41 @@
             location="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            location="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            location="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
             location="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
+            location="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            type="SPLIT" />
+        <artifact
             location="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1548003119736"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="R_CLASS_CHANGE"
-        timestamp="1547947207181"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1548003247073"
         verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
-            type="SPLIT" />
         <artifact
             location="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
-        <artifact
-            location="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-            type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1547947624788"
-        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/Sami/FHK/9. Semester/EiS/Diabetec/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
             type="SPLIT_MAIN" />
